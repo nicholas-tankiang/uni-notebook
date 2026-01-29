@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class BasicComputation_hw2{
     public static void main(String[] args) {
-        //
+        // Instructions: (ADD IF NEEDED TO FOLLOW Qs/ANSWERS)
 
         /*
         1. Write a program that demonstrates the approximate nature of floating-point values by
@@ -160,10 +160,17 @@ public class BasicComputation_hw2{
    If the int variable × contains 10, what will the following Java statements display? 
    System.out.println("Test 1" + × * 3 * 2.0); 
    System.out.println("Test 2" + × * 3 + 2.0);
+
+   A: 
+   Test 160.0
+   Test 2302.0
+
    Given these results, explain why the following Java statement will not compile: 
    System.out.println("Test 3" + × * 3 − 2.0); 
 
-   A: 
-   */
+   A: Java, following the order of operations, will compute x * 3, then concatenate string 
+   "Test 3" to x3. It will error because the product is now a string, and java cannot interpret 
+   the interaction of subtracting a non-integer, the string, by 2. 
+   */ 
 
 }
