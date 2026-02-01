@@ -35,6 +35,21 @@ public class BasicComputation_hw2{
         System.out.println("Enter valid number for problem three.");
         input_3 = keyboard.nextFloat();
         problemThree(input_3);
+
+
+        // Note to self: because of how nextInt works, the "input stream" stops right before 
+        //nextInt's "\n", so calling nextLine() receieves a blank \n string and fails.
+        keyboard.nextLine();
+
+        //7 - Input setup
+        System.out.println("Enter string for problem seven.");
+        String input_4 = keyboard.nextLine();
+        problemSeven(input_4);
+
+        //8 - Input setup
+        System.out.println("Enter string for problem eight.");
+        String input_5 = keyboard.nextLine();
+        problemEight(input_5);
     }
 
     public static void problemOne(float input_1){
@@ -173,4 +188,42 @@ public class BasicComputation_hw2{
    the interaction of subtracting a non-integer, the string, by 2. 
    */ 
 
+   public static void problemSeven(String input_4){
+        /* 
+        7) Write some Java statements that use the String methods indexOf and substring to find the 
+        first word in a string. We define word to be a string of characters that does not include whitespace.
+        For example, the first word of the string "Hello, my good friend!" is the string "Hello," 
+        and the second word is the string "my".
+        */
+        // Set temp int for index, get index of first char that equals " "
+        int tmpIndex = input_4.indexOf(" ");
+        //TEST PRINT 
+        // System.out.println(tmpIndex);
+
+        // CASE no whitespace found, otherwise results in index out of bounds at -1
+        if (tmpIndex == -1) {
+            System.out.println("Index at " + input_4);
+        } else {
+            // Print subset of string up to tmpIndex's value
+            System.out.println("String subset: " + input_4.substring(0, tmpIndex));
+        }   
+    }
+
+    public static void problemEight(String input_5){
+        // Repeat the previous exercise but find the second word in the string.
+        int firstIndex = input_5.indexOf(" ");
+
+        // TEST PRINT 
+        // System.out.println("FIRST INDEX:" + firstIndex);
+
+        if (firstIndex == -1) {
+            System.out.println(input_5.substring(0, firstIndex));
+        } else {
+            // Using the first index placeholder + 1 as starting point, get first whitespace
+            int secondIndex = input_5.indexOf(" ", firstIndex + 1);
+            // TESTING PRINT
+            // System.out.println("SECOND: " + secondIndex);
+            System.out.println(input_5.substring(firstIndex, secondIndex));
+        } 
+    }
 }
