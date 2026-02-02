@@ -157,7 +157,7 @@ public class BasicComputation_hw2{
    dollars = amount / 100;
    amount = amount % 100;
    dollarsHalf = amount / 50;
-   amount = dollarsHalf = amount % 50;
+   amount = dollarsHalf % 50;
 
    *Note that because the program specifies a limit of 99, representing 99 cents, 
    the dollar would never be used.
