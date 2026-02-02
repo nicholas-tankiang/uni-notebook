@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class BasicComputation_hw2{
     public static void main(String[] args) {
-        // Instructions: (ADD IF NEEDED TO FOLLOW Qs/ANSWERS)
+        // Instructions: See method implementation beneath Main for non-scanner related answers
 
         /*
         1. Write a program that demonstrates the approximate nature of floating-point values by
