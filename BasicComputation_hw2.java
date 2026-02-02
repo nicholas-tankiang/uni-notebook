@@ -205,7 +205,7 @@ public class BasicComputation_hw2{
             System.out.println("Index at " + input_4);
         } else {
             // Print subset of string up to tmpIndex's value
-            System.out.println("String subset: " + input_4.substring(0, tmpIndex));
+            System.out.println("First word in string: " + input_4.substring(0, tmpIndex));
         }   
     }
 
@@ -223,7 +223,20 @@ public class BasicComputation_hw2{
             int secondIndex = input_5.indexOf(" ", firstIndex + 1);
             // TESTING PRINT
             // System.out.println("SECOND: " + secondIndex);
-            System.out.println(input_5.substring(firstIndex, secondIndex));
+            System.out.println("Second word in string: " + input_5.substring(firstIndex + 1, secondIndex));
         } 
     }
+
+    // 9) problemNine:
+   /* 
+   What does the following Java statement display? 
+   
+   System.out.println("\"\tTest\\\\\rIt\'"); 
+   
+   Does replacing the r with an n make a difference in what is displayed? 
+
+   A: It prints "It'est\\". 
+   The backslash \ is interpreted as an escape character which allows you to write commands or 
+   type otherwise "illegal" characters into a string like a double quotation or a backslash \. 
+   */
 }
