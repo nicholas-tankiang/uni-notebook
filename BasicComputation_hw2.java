@@ -202,7 +202,7 @@ public class BasicComputation_hw2{
 
         // CASE no whitespace found, otherwise results in index out of bounds at -1
         if (tmpIndex == -1) {
-            System.out.println("Index at " + input_4);
+            System.out.println("No spaces detected in " + input_4);
         } else {
             // Print subset of string up to tmpIndex's value
             System.out.println("First word in string: " + input_4.substring(0, tmpIndex));
@@ -217,7 +217,7 @@ public class BasicComputation_hw2{
         // System.out.println("FIRST INDEX:" + firstIndex);
 
         if (firstIndex == -1) {
-            System.out.println(input_5.substring(0, firstIndex));
+            System.out.println("No spaces detected in " + input_5);
         } else {
             // Using the first index placeholder + 1 as starting point, get first whitespace
             int secondIndex = input_5.indexOf(" ", firstIndex + 1);
