@@ -37,6 +37,9 @@ public class BasicComputation_hw2{
         System.out.println("Enter string for problem eight.");
         String input_5 = keyboard.nextLine();
         problemEight(input_5);
+
+        //9 - Method call
+        problemNine();
     }
 
     public static void problemOne(float input_1){
@@ -234,4 +237,12 @@ public class BasicComputation_hw2{
    The backslash \ is interpreted as an escape character which allows you to write commands or 
    type otherwise "illegal" characters into a string like a double quotation or a backslash \. 
    */
+
+    public static void problemNine(){
+        // 10) problemTen:
+        /*
+        Write a single Java statement that will display the words one, two, and three, each on its own line.
+        */
+       System.out.println("one\ntwo\nthree");
+    }
 }
