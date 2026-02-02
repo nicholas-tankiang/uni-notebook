@@ -4,41 +4,28 @@ public class BasicComputation_hw2{
     public static void main(String[] args) {
         // Instructions: See method implementation beneath Main for non-scanner related answers
 
-        /*
-        1. Write a program that demonstrates the approximate nature of floating-point values by
-        performing the following tasks:
-        */
-
         //1.1) Use Scanner to read a floating-point value x.
-       Scanner keyboard = new Scanner(System.in);
-       float input_1, input_2, input_3;
+        Scanner keyboard = new Scanner(System.in);
+        float input_1, input_2, input_3;
         // Prompt input
-       System.out.println("Enter valid number for problem one.");
+        System.out.println("Enter valid number for problem one.");
         input_1 = keyboard.nextFloat();
         // Call on method problemOne using user input, floating-point value x
         problemOne(input_1);
        
-        /*
-        2. Write a program that demonstrates type casting of double values by performing the
-        following tasks:
-        */
-       //2.1) 1. Use Scanner to read a floating-point value x.
-       System.out.println("Enter valid number for problem two.");
+        //2.1) 1. Use Scanner to read a floating-point value x.
+        System.out.println("Enter valid number for problem two.");
         input_2 = keyboard.nextFloat();
         problemTwo(input_2);
-
-        /*
-        3. Write a program that demonstrates the operator % by performing the following tasks:
-        */
 
         //3.1) Use Scanner to read a floating-point value x.
         System.out.println("Enter valid number for problem three.");
         input_3 = keyboard.nextFloat();
         problemThree(input_3);
 
-
         // Note to self: because of how nextInt works, the "input stream" stops right before 
-        //nextInt's "\n", so calling nextLine() receieves a blank \n string and fails.
+        // nextInt's "\n", so calling nextLine() receieves a blank \n string and fails.
+        // Line below moves buffer past \n.
         keyboard.nextLine();
 
         //7 - Input setup
@@ -53,15 +40,18 @@ public class BasicComputation_hw2{
     }
 
     public static void problemOne(float input_1){
-        // Calculate and print problems in problem 1
         // Note: Will not execute with invalid input
+        /*
+        1. Write a program that demonstrates the approximate nature of floating-point values by
+        performing the following tasks:
+        */
        
         //1.2) Compute 1.0 / x and store the result in y.
         float y = 1 / input_1;
         //1.3) Display x, y, and the product of x and y.
         float product_1 = input_1 * y;
         System.out.println("The value of x is: " + input_1 + " || The value of y is: " + y + " || The product of x and y is: " + product_1);
-        //4) Subtract 1 from the product of x and y and display the result.
+        //1.4) Subtract 1 from the product of x and y and display the result.
         System.out.println("(X * Y) minus 1 is: " + (product_1 - 1));
         // Try your program with values of x that range from 2e-11 to 2e11. What can you conclude?
         /*
@@ -71,8 +61,11 @@ public class BasicComputation_hw2{
     }
 
     public static void problemTwo(float input_2){
-        // Calculate and print problems in problem 2
         // Note: Will not execute with invalid input
+        /*
+        2. Write a program that demonstrates type casting of double values by performing the
+        following tasks:
+        */
 
        //2.2) Type cast x to an int value and store the result in y.
        int y = (int)input_2;
@@ -100,8 +93,10 @@ public class BasicComputation_hw2{
     }
 
     public static void problemThree(float input_3){
-        // Calculate and print problems in problem 3
         // Note: Will not execute with invalid input
+        /*
+        3. Write a program that demonstrates the operator % by performing the following tasks:
+        */
 
         //3.2) Compute x % 2.0 and store the result in y.
         double y = input_3 % 2.0;
