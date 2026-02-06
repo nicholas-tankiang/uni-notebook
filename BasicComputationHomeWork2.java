@@ -19,14 +19,13 @@ public class BasicComputationHomeWork2{
         problemTwo(input_2);
 
         //3.1) Use Scanner to read a floating-point value x.
-        // System.out.println("Enter valid number for problem three.");
-        // input_3 = keyboard.nextFloat();
-        // problemThree(input_3);
-
+        System.out.println("Enter valid number for problem three.");
+        input_3 = keyboard.nextFloat();
+        problemThree(input_3);
         // Note to self: because of how nextInt works, the "input stream" stops right before 
         // nextInt's "\n", so calling nextLine() receieves a blank \n string and fails.
         // Line below moves buffer past \n.
-        //keyboard.nextLine();
+        keyboard.nextLine();
 
         //7 - Input setup
         System.out.println("Enter string for problem seven.");
@@ -138,7 +137,7 @@ public class BasicComputationHomeWork2{
     A: 
     4.1) u + v * w + × = (v * w) + u + x = (3 * 5) + 2 + 7 = 15 + 2 + 7 = 24
     4.2) u + y % v * w + × = (11%3)(5)+(2)+(7) = (2)5+2+7 = 10+2+7 = 19
-    4.3) u++ / v + u++ * w =  (2++)/(3)+(2++)*(5) = (3)/3+(3)*5 = 1+15 = 16
+    4.3) u++ / v + u++ * w =  (2++)/(3)+(2++)*(5) = 2/3+(2++*5) = 0 + (3*5) = 15
     */
 
    // 5) problemFive:
