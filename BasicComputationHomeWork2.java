@@ -141,7 +141,6 @@ public class BasicComputationHomeWork2{
     */
 
    // 5) problemFive:
-   // To do: Note to self: Should probably check logic for this just in case before submission
    /* 
    What changes to the ChangeMaker program in Listing 2.3 are necessary if it 
    also accepts coins for one dollar and half a dollar? 
@@ -156,7 +155,7 @@ public class BasicComputationHomeWork2{
    dollars = amount / 100;
    amount = amount % 100;
    dollarsHalf = amount / 50;
-   amount = dollarsHalf % 50;
+   amount = amount % 50;
 
    *Note that because the program specifies a limit of 99, representing 99 cents, 
    the dollar would never be used.
@@ -164,7 +163,7 @@ public class BasicComputationHomeWork2{
    Next, we would need to integrate these values into the print statements. 
    Below the first printline statement, we would add the following two lines:
    System.out.println(dollars + " dollar(s)");
-   System.out.println(dollarsHalf + "half dollar(s)"); 
+   System.out.println(dollarsHalf + " half dollar(s)"); 
    */
 
    // 6) problemSix:
