@@ -6,22 +6,22 @@ public class BasicComputationHomeWork2{
 
         //1.1) Use Scanner to read a floating-point value x.
         Scanner keyboard = new Scanner(System.in);
-        float input_1, input_2, input_3;
+        float input1, input2, input3;
         // Prompt input
         System.out.println("Enter valid number for problem one.");
-        input_1 = keyboard.nextFloat();
+        input1 = keyboard.nextFloat();
         // Call on method problemOne using user input, floating-point value x
-        problemOne(input_1);
+        problemOne(input1);
        
         //2.1) 1. Use Scanner to read a floating-point value x.
         System.out.println("Enter valid number for problem two.");
-        input_2 = keyboard.nextFloat();
-        problemTwo(input_2);
+        input2 = keyboard.nextFloat();
+        problemTwo(input2);
 
         //3.1) Use Scanner to read a floating-point value x.
         System.out.println("Enter valid number for problem three.");
-        input_3 = keyboard.nextFloat();
-        problemThree(input_3);
+        input3 = keyboard.nextFloat();
+        problemThree(input3);
         // Note to self: because of how nextInt works, the "input stream" stops right before 
         // nextInt's "\n", so calling nextLine() receieves a blank \n string and fails.
         // Line below moves buffer past \n.
@@ -29,20 +29,20 @@ public class BasicComputationHomeWork2{
 
         //7 - Input setup
         System.out.println("Enter string for problem seven.");
-        String input_4 = keyboard.nextLine();
-        problemSeven(input_4);
+        String input4 = keyboard.nextLine();
+        problemSeven(input4);
 
         //8 - Input setup
         System.out.println("Enter string for problem eight.");
-        String input_5 = keyboard.nextLine();
-        problemEight(input_5);
+        String input5 = keyboard.nextLine();
+        problemEight(input5);
 
         //10 - Method call
         System.out.println("Result for problem ten below: ");
         problemTen();
     }
 
-    public static void problemOne(float input_1){
+    public static void problemOne(float input1){
         // Note: Will not execute with invalid input
         /*
         1. Write a program that demonstrates the approximate nature of floating-point values by
@@ -50,10 +50,10 @@ public class BasicComputationHomeWork2{
         */
        
         //1.2) Compute 1.0 / x and store the result in y.
-        float y = 1 / input_1;
+        float y = 1 / input1;
         //1.3) Display x, y, and the product of x and y.
-        float product_1 = input_1 * y;
-        System.out.println("The value of x is: " + input_1 + " || The value of y is: " + y + " || The product of x and y is: " + product_1);
+        float product_1 = input1 * y;
+        System.out.println("The value of x is: " + input1 + " || The value of y is: " + y + " || The product of x and y is: " + product_1);
         //1.4) Subtract 1 from the product of x and y and display the result.
         System.out.println("(X * Y) minus 1 is: " + (product_1 - 1));
         // Try your program with values of x that range from 2e-11 to 2e11. What can you conclude?
@@ -63,7 +63,7 @@ public class BasicComputationHomeWork2{
         */
     }
 
-    public static void problemTwo(float input_2){
+    public static void problemTwo(float input2){
         // Note: Will not execute with invalid input
         /*
         2. Write a program that demonstrates type casting of double values by performing the
@@ -71,13 +71,13 @@ public class BasicComputationHomeWork2{
         */
 
        //2.2) Type cast x to an int value and store the result in y.
-       int y = (int)input_2;
+       int y = (int)input2;
        //2.3) Display x and y clearly labeled.
-       System.out.println("The value of x is: " + input_2 + " || The value of y is: " + y);
+       System.out.println("The value of x is: " + input2 + " || The value of y is: " + y);
        //2.4) Type cast x to a byte value and store the result in z.
-       byte z = (byte)input_2;
+       byte z = (byte)input2;
        //2.5) Display x and z clearly labeled.
-       System.out.println("The value of x is: " + input_2 + " || The value of z is: " + z);
+       System.out.println("The value of x is: " + input2 + " || The value of z is: " + z);
         /*        
         Try your program with positive and negative values of x that range in magnitude from 2e-
         11 to 2e11. What can you conclude?
@@ -95,20 +95,20 @@ public class BasicComputationHomeWork2{
         */
     }
 
-    public static void problemThree(float input_3){
+    public static void problemThree(float input3){
         // Note: Will not execute with invalid input
         /*
         3. Write a program that demonstrates the operator % by performing the following tasks:
         */
 
         //3.2) Compute x % 2.0 and store the result in y.
-        double y = input_3 % 2.0;
+        double y = input3 % 2.0;
         //3.3) Display x and y clearly labeled.
-        System.out.println("The value of x is: " + input_3 + " || The value of y is: " + y);
+        System.out.println("The value of x is: " + input3 + " || The value of y is: " + y);
         //3.4) Type cast x to an int value and store the result in z.
-        int z = (int)input_3;
+        int z = (int)input3;
         //3.5) Display x, z, and z % 2 clearly labeled.
-        System.out.println("x%2 value: " + (input_3%2) + " || z value: " + z + " || z%2 value: " + (y%2));
+        System.out.println("x%2 value: " + (input3%2) + " || z value: " + z + " || z%2 value: " + (y%2));
         /*
         Try your program with positive and negative values of x. What implications do your results have 
         for deciding whether a negative integer is odd?
@@ -185,7 +185,7 @@ public class BasicComputationHomeWork2{
    the interaction of subtracting a non-integer, the string, by 2. 
    */ 
 
-   public static void problemSeven(String input_4){
+   public static void problemSeven(String input4){
         /* 
         7) Write some Java statements that use the String methods indexOf and substring to find the 
         first word in a string. We define word to be a string of characters that does not include whitespace.
@@ -193,36 +193,36 @@ public class BasicComputationHomeWork2{
         and the second word is the string "my".
         */
         // Set temp int for index, get index of first char that equals " "
-        int tmpIndex = input_4.indexOf(" ");
+        int tmpIndex = input4.indexOf(" ");
         //TEST PRINT 
         // System.out.println(tmpIndex);
 
         // CASE no whitespace found, otherwise results in index out of bounds at -1
         if (tmpIndex == -1) {
-            System.out.println("No spaces detected in " + input_4);
+            System.out.println("No spaces detected in " + input4);
         } else {
             // Print subset of string up to tmpIndex's value
-            System.out.println("First word in string: " + input_4.substring(0, tmpIndex));
+            System.out.println("First word in string: " + input4.substring(0, tmpIndex));
         }   
     }
 
-    public static void problemEight(String input_5){
+    public static void problemEight(String input5){
         // Repeat the previous exercise but find the second word in the string.
-        int firstIndex = input_5.indexOf(" ");
+        int firstIndex = input5.indexOf(" ");
 
         // TEST PRINT 
         // System.out.println("FIRST INDEX:" + firstIndex);
 
         if (firstIndex == -1) {
-            System.out.println("No spaces detected in " + input_5);
+            System.out.println("No spaces detected in " + input5);
         } else {
             // Using the first index placeholder + 1 as starting point, get first whitespace
-            int secondIndex = input_5.indexOf(" ", firstIndex + 1);
+            int secondIndex = input5.indexOf(" ", firstIndex + 1);
             // secondIndex will be -1 if only two words entered
             if (secondIndex == -1) {
-                System.out.println("Second word in string: " + input_5.substring(firstIndex + 1));
+                System.out.println("Second word in string: " + input5.substring(firstIndex + 1));
             } else {
-                System.out.println("Second word in string: " + input_5.substring(firstIndex + 1, secondIndex));
+                System.out.println("Second word in string: " + input5.substring(firstIndex + 1, secondIndex));
             }
         } 
     }
