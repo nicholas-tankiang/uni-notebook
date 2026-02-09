@@ -37,8 +37,9 @@ public class BasicComputationHomeWork2{
         String input_5 = keyboard.nextLine();
         problemEight(input_5);
 
-        //9 - Method call
-        problemNine();
+        //10 - Method call
+        System.out.println("Result for problem ten below: ");
+        problemTen();
     }
 
     public static void problemOne(float input_1){
@@ -217,9 +218,12 @@ public class BasicComputationHomeWork2{
         } else {
             // Using the first index placeholder + 1 as starting point, get first whitespace
             int secondIndex = input_5.indexOf(" ", firstIndex + 1);
-            // TESTING PRINT
-            // System.out.println("SECOND: " + secondIndex);
-            System.out.println("Second word in string: " + input_5.substring(firstIndex + 1, secondIndex));
+            // secondIndex will be -1 if only two words entered
+            if (secondIndex == -1) {
+                System.out.println("Second word in string: " + input_5.substring(firstIndex + 1));
+            } else {
+                System.out.println("Second word in string: " + input_5.substring(firstIndex + 1, secondIndex));
+            }
         } 
     }
 
@@ -236,7 +240,7 @@ public class BasicComputationHomeWork2{
    type otherwise "illegal" characters into a string like a double quotation or a backslash \. 
    */
 
-    public static void problemNine(){
+    public static void problemTen(){
         // 10) problemTen:
         /*
         Write a single Java statement that will display the words one, two, and three, each on its own line.
