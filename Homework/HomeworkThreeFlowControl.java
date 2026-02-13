@@ -43,14 +43,21 @@ public class HomeworkThreeFlowControl{
                 return gradeValue;
             }
     }
+}
 
     public static double problemSix(String letter){
-    /*
-    Consider the previous question but include + or − letter grades. A+ is 4.25, A− is 3.75, B+ is 3.25, B− is 2.75, and so on.
-    1. Why can’t we use one switch statement with no other conditionals to convert these additional letter grades?
-    2. Write a fragment of code that will do the conversion using a multibranch if-else statement.
-    3. Write a fragment of code that will do the conversion using nested switch statements.
-    */
+        /*
+        Consider the previous question but include + or − letter grades. A+ is 4.25, A− is 3.75, 
+        B+ is 3.25, B− is 2.75, and so on.
+        1. Why can’t we use one switch statement with no other conditionals to convert these additional letter grades?
+        2. Write a fragment of code that will do the conversion using a multibranch if-else statement.
+        3. Write a fragment of code that will do the conversion using nested switch statements.
+
+        A: 
+        1) 
+        */
+
+        //2
 
     }
 
@@ -64,5 +71,32 @@ public class HomeworkThreeFlowControl{
     
     }
 
-   
+class grades{
+    protected static double gradeValue = 0.0;
+
+    public static double returnGrade(String letter){ 
+        switch (letter){
+            case "A":
+                gradeValue = 4.0;
+                return gradeValue;
+            case "B":
+                gradeValue = 3.0;
+                return gradeValue;
+            case "C":
+                gradeValue = 2.0;
+                return gradeValue;
+            case "D":
+                gradeValue = 1.0;
+                return gradeValue;
+            case "F":
+                gradeValue = 0.0;
+                return gradeValue;
+            default:
+                gradeValue = 0.0;
+                System.out.println("ERROR");
+                return gradeValue;
+        }
+    }
 }
+   
+
