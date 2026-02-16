@@ -7,10 +7,12 @@ public class HomeworkThreeFlowControl{
         Scanner keyboard = new Scanner(System.in);
 
         // Problem 5 setup
+        System.out.println("ENTER LETTER");
         String letter = keyboard.nextLine();
         System.out.println("gradeValue's result is: " + problemFive(letter));
 
         // Problem 6 setup
+        System.out.println("ENTER LETTER");
         letter = keyboard.nextLine();
         System.out.println("gradeValue's result is: " + problemFive(letter));
 
@@ -114,7 +116,7 @@ public class HomeworkThreeFlowControl{
         } else if (checkAmount > 1000) {
             return (chargeAmount * 0.01) + 40;
         }
-        
+
         System.out.println("ERROR: Invalid input entered");
         return chargeAmount;
     }
