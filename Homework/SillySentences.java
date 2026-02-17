@@ -26,7 +26,7 @@ public class SillySentences{
         System.out.println("ENTER FIRST NAME OF FRIEND/RELATIVE");
         String name = keyboard.nextLine();
 
-        System.out.println("I had a dream that " + name + " ate a " + color + animal + "\n" +
+        System.out.println("I had a dream that " + name + " ate a " + color + " " + animal + "\n" +
         "and said it tasted like " + food + "!");
     }
 }
