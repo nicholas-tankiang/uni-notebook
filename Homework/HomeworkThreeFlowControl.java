@@ -1,9 +1,7 @@
 import java.util.Scanner;
 
 public class HomeworkThreeFlowControl{
-    // set gradeValue to global var 
-    public static double gradeValue = 0.0;
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
 
         // Problem 5 setup
@@ -149,6 +147,8 @@ public class HomeworkThreeFlowControl{
         set the value to 0.0 and display an error message.
         */
 
+        double gradeValue = 0;
+
         switch (letter){
             case "A":
                 gradeValue = 4.0;
@@ -171,62 +171,123 @@ public class HomeworkThreeFlowControl{
                 return gradeValue;
             }
     }
-}
 
-    public static void problemSix(String letter){
-        /*
-        Consider the previous question but include + or − letter grades. 
-        A+ is 4.25, A− is 3.75, B+ is 3.25, B− is 2.75, and so on.
-        1. Why can’t we use one switch statement with no other conditionals to convert these 
-        additional letter grades?
+    /*
+    problemSix:
+    6. Consider the previous question but include + or − letter grades. 
+    A+ is 4.25, A− is 3.75, B+ is 3.25, B− is 2.75, and so on.
+    1. Why can’t we use one switch statement with no other conditionals to convert these 
+    additional letter grades?
 
-        A: 
-        1) I believe that the original intent of this question was to imply that you cannnot use
-        a string as a condition in a switch statement, but I believe that it is currently possible in java.
-        In this original case, the switch statement would be running on a Char condition to evaluate the 
-        letter grades, whereas adding the +/- would have forced the switch statement to evaluate Strings instead,
-        which this question presumably did not believe to be a valid condition.
-        */
+    A: 
+    1) I believe that the original intent of this question was to imply that you cannot use
+    a string as a condition in a switch statement, but I believe that it is currently possible in java.
+    In this original case, the switch statement would be running on a Char condition to evaluate the 
+    letter grades, whereas adding the +/- would have forced the switch statement to evaluate Strings instead,
+    which this question presumably did not believe to be a valid condition.
+    */
 
+    public static double problemSixIfElse(String letter){
         // 2. Write a fragment of code that will do the conversion using a multibranch if-else statement.
+        double gradeValue = 0;
 
+        if (letter.equals("A+")) {
+            gradeValue = 4.25;
+            return gradeValue;
+        } else if (letter.equals("A")) {
+            gradeValue = 4.0;
+            return gradeValue;
+        } else if (letter.equals("A-")) {
+            gradeValue = 3.75;
+            return gradeValue;
+        } else if (letter.equals("B+")) {
+            gradeValue = 3.25;
+            return gradeValue;
+        } else if (letter.equals("B")) {
+            gradeValue = 3.0;
+            return gradeValue;
+        } else if (letter.equals("B-")) {
+            gradeValue = 2.75;
+            return gradeValue;
+        } else if (letter.equals("C+")) {
+            gradeValue = 2.25;
+            return gradeValue;
+        } else if (letter.equals("C")) {
+            gradeValue = 2.0;
+            return gradeValue;
+        } else if (letter.equals("C-")) {
+            gradeValue = 1.75;
+            return gradeValue;
+        } else if (letter.equals("D+")) {
+            gradeValue = 1.25;
+            return gradeValue;
+        } else if (letter.equals("D")) {
+            gradeValue = 1.0;
+            return gradeValue;
+        } else if (letter.equals("D-")) {
+            gradeValue = 0.75;
+            return gradeValue;
+        } else if (letter.equals("F+")) {
+            gradeValue = 0.25;
+            return gradeValue;
+        } else if (letter.equals("F-")) {
+            gradeValue = 0.0;
+            return gradeValue;
+        } 
+
+        gradeValue = 0.0;
+        System.out.println("ERROR: INVALID INPUT");
+        return gradeValue;
+    }
+
+    public static double problemSixNestedSwitch(String letter){
         // 3. Write a fragment of code that will do the conversion using nested switch statements.
+        double gradeValue = 0;
+
+        System.out.println("ERROR");
+        return gradeValue;
     }
 
     public static void problemSeven(String letterP1, String letterP2){
-    /*
-    Write a program to play the rock-paper-scissor game. Each of two users types in 
-    either P, R, or S. The program then announces the winner as well as the basis for 
-    determining the winner: paper covers rock, rock breaks scissors, scissors cuts paper, 
-    or nobody wins. Your program should allow the users to use lowercases as well as uppercase letters.
-    */
-    
-    // concatenate inputs to serve as conditional  
-    String lettersConcat = letterP1 + "-" + letterP2;
-    switch (lettersConcat) {
-        // p1 win conditions
-        case "p-r":
-        case "r-s":
-        case "s-p":
-            System.out.println("P1 WIN");
-            break;
-        // p2 win conditions
-        case "p-s":
-        case "r-p":
-        case "s-r":
-            System.out.println("P2 WIN");
-            break;     
-        // tie conditions
-        case "p-p":
-        case "r-r":
-        case "s-s":
-            System.out.println("TIE");
-            break;
-        // if unexpected input
-        default:
-            System.out.println("ERROR, INVALID INPUT");
+        /*
+        Write a program to play the rock-paper-scissor game. Each of two users types in 
+        either P, R, or S. The program then announces the winner as well as the basis for 
+        determining the winner: paper covers rock, rock breaks scissors, scissors cuts paper, 
+        or nobody wins. Your program should allow the users to use lowercases as well as uppercase letters.
+        */
+        
+        // concatenate inputs to serve as conditional  
+        String lettersConcat = letterP1 + "-" + letterP2;
+        switch (lettersConcat) {
+            // p1 win conditions
+            case "p-r":
+            case "r-s":
+            case "s-p":
+                System.out.println("P1 WIN");
+                break;
+            // p2 win conditions
+            case "p-s":
+            case "r-p":
+            case "s-r":
+                System.out.println("P2 WIN");
+                break;     
+            // tie conditions
+            case "p-p":
+            case "r-r":
+            case "s-s":
+                System.out.println("TIE");
+                break;
+            // if unexpected input
+            default:
+                System.out.println("ERROR, INVALID INPUT");
+        }
     }
 }
+
+
+
+/*
+// IGNORE: Polymorphism class test
 
 public class grades{
     protected static double gradeValue = 0.0;
@@ -256,4 +317,4 @@ public class grades{
         }
     }
 }
-
+*/
