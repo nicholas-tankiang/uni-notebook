@@ -4,100 +4,104 @@ public class HomeworkThreeFlowControl{
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
 
+        // Problem 3 setup
+        System.out.println("3: ENTER CHECK AMOUNT");
+        double checkAmount = keyboard.nextDouble();
+        System.out.println("3: Check amount is: " + problemThree(checkAmount));
+        keyboard.nextLine();
+
         // Problem 5 setup
-        System.out.println("ENTER LETTER A THROUGH F");
-        String letter = keyboard.nextLine();
+        System.out.println("5: ENTER LETTER A THROUGH F");
+        String letter = keyboard.nextLine().toUpperCase();
         System.out.println("5: gradeValue's result is: " + problemFive(letter));
 
         // Problem 6 setup
-        System.out.println("ENTER LETTER AND/OR SIGN, A THROUGH F");
-        letter = keyboard.nextLine();
+        System.out.println("6: ENTER LETTER AND/OR SIGN, A THROUGH F");
+        letter = keyboard.nextLine().toUpperCase();
         System.out.println("6 IF-ELSE: gradeValue's result is: " + problemSixIfElse(letter));
         System.out.println("6 NESTED SWITCH: gradeValue's result is: " + problemSixNestedSwitch(letter));
 
         // Problem 7 setup
-        System.out.println("INPUT 1 REQUEST");
+        System.out.println("7: P1, ENTER R, P, OR S");
         String letterP1 = keyboard.nextLine().toLowerCase();
-        System.out.println("INPUT 2 REQUEST");
+        System.out.println("7: P2, ENTER R, P, OR S");
         String letterP2 = keyboard.nextLine().toLowerCase();
         problemSeven(letterP1, letterP2);
     }
 
     /*
     problemOne:
-    Consider the following fragment of code: 
+        Consider the following fragment of code: 
 
-    if (x > 5) 
-    System.out.println("A"); 
-    else if (x < 10) 
-    System.out.println("B"); 
-    else 
-    System.out.println("C"); 
+        if (x > 5) 
+        System.out.println("A"); 
+        else if (x < 10) 
+        System.out.println("B"); 
+        else 
+        System.out.println("C"); 
 
-    What is displayed if x is 4; 5; 6; 9; 10; 11
+        What is displayed if x is 4; 5; 6; 9; 10; 11
 
-    A: If x is...
+        A: If x is...
 
-    (4): 
-    B
-    (5): 
-    B
-    (6): 
-    A
-    B
-    (9): 
-    A
-    B
-    (10):
-    A
-    (11):
-    A
+        (4): 
+        B
+        (5): 
+        B
+        (6): 
+        A
+        B
+        (9): 
+        A
+        B
+        (10):
+        A
+        (11):
+        A
     */
 
     /*
     problemTwo:
-    Consider the following fragment of code: 
+        Consider the following fragment of code: 
 
-    if (x > 5) { 
-        System.out.println("A"); 
-        if (x < 10) 
-        System.out.println("B"); 
-    } else 
-    System.out.println("C"); 
+        if (x > 5) { 
+            System.out.println("A"); 
+            if (x < 10) 
+            System.out.println("B"); 
+        } else 
+        System.out.println("C"); 
 
-    What is displayed if x is 4; 5; 6; 9; 10; 11
+        What is displayed if x is 4; 5; 6; 9; 10; 11
 
-    A: If x is...
+        A: If x is...
 
-    (4):
-    C
-    (5):
-    C
-    (6):
-    A
-    B
-    (9):
-    A
-    B
-    (10):
-    A
-    (11):
-    A
+        (4):
+        C
+        (5):
+        C
+        (6):
+        A
+        B
+        (9):
+        A
+        B
+        (10):
+        A
+        (11):
+        A
     */
 
+    public static double problemThree(double checkAmount) {
     /*
     problemThree:
-
-    We would like to assess a service charge for cashing a check. 
-    The service charge depends on the amount of the check. 
-    If the check amount is less than $10, we will charge $1. 
-    If the amount is greater than $10 but less than $100, we will charge 10 percent of the amount. 
-    If the amount is greater than $100, but less than $1,000, we will charge $5 plus 5 percent of the amount. 
-    If the value is over $1,000, we will charge $40 plus 1 percent of the amount. 
-    Use a multibranch if-else statement in a fragment of code to compute the service charge.
+        We would like to assess a service charge for cashing a check. 
+        The service charge depends on the amount of the check. 
+        If the check amount is less than $10, we will charge $1. 
+        If the amount is greater than $10 but less than $100, we will charge 10 percent of the amount. 
+        If the amount is greater than $100, but less than $1,000, we will charge $5 plus 5 percent of the amount. 
+        If the value is over $1,000, we will charge $40 plus 1 percent of the amount. 
+        Use a multibranch if-else statement in a fragment of code to compute the service charge.
     */
-
-    public static double problemThree(int checkAmount) {
         int chargeAmount = 0;
 
         // guard clause; if negative number entered, exit method
@@ -122,31 +126,31 @@ public class HomeworkThreeFlowControl{
 
     /*
     problemFour: 
-    What is the value of each of the following Boolean expressions if x is 5, y is 10, and z is 15?
+        What is the value of each of the following Boolean expressions if x is 5, y is 10, and z is 15?
 
-    1. (x < 5 && y > x)
-    2. (x < 5 || y > x)
-    3. (x > 3 || y < 10 && z == 15)
-    4. (! (x > 3) && x! = z || x + y == z)
+        1. (x < 5 && y > x)
+        2. (x < 5 || y > x)
+        3. (x > 3 || y < 10 && z == 15)
+        4. (! (x > 3) && x! = z || x + y == z)
 
-    A:
-    1. false
-    2. true
-    3. true
-    4. 
-    //(!(true) AND true OR true)
-    //(false OR true)
-    true
+        A:
+        1. false
+        2. true
+        3. true
+        4. 
+        //(!(true) AND true OR true)
+        //(false OR true)
+        true
     */
 
     public static double problemFive(String letter){
-        /*
+    /*
         5. Write a switch statement to convert a letter of grade into an 
         equivalent numeric value on a four-point scale. Set the value of 
         the variable gradeValue to 4.0 for an A, 3.0 for a B, 2.0 for a C, 
         1.0 for a D, and 0.0 for an F. For any other letter, 
         set the value to 0.0 and display an error message.
-        */
+    */
 
         double gradeValue = 0;
 
@@ -175,17 +179,17 @@ public class HomeworkThreeFlowControl{
 
     /*
     problemSix:
-    6. Consider the previous question but include + or − letter grades. 
-    A+ is 4.25, A− is 3.75, B+ is 3.25, B− is 2.75, and so on.
-    1. Why can’t we use one switch statement with no other conditionals to convert these 
-    additional letter grades?
+        6. Consider the previous question but include + or − letter grades. 
+        A+ is 4.25, A− is 3.75, B+ is 3.25, B− is 2.75, and so on.
+        1. Why can’t we use one switch statement with no other conditionals to convert these 
+        additional letter grades?
 
-    A: 
-    1) I believe that the original intent of this question was to imply that you cannot use
-    a string as a condition in a switch statement, but I believe that it is currently possible in java.
-    In this original case, the switch statement would be running on a Char condition to evaluate the 
-    letter grades, whereas adding the +/- would have forced the switch statement to evaluate Strings instead,
-    which this question presumably did not believe to be a valid condition.
+        A: 
+        1) I believe that the original intent of this question was to imply that you cannot use
+        a string as a condition in a switch statement, but I believe that it is currently possible in java.
+        In this original case, the switch statement would be running on a Char condition to evaluate the 
+        letter grades, whereas adding the +/- would have forced the switch statement to evaluate Strings instead,
+        which this question presumably did not believe to be a valid condition.
     */
 
     public static double problemSixIfElse(String letter){
