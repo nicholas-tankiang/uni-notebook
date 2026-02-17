@@ -9,6 +9,9 @@ public class HomeworkFourLoops{
         String userInput = input.nextLine();
         problemOneWhile(userInput);
         problemOneDoWhile(userInput);
+
+
+        problemSix();
     }
 
     /*
@@ -70,13 +73,22 @@ public class HomeworkFourLoops{
         double interestAmount = annualPercentRate / 12;
 
         double balance = 0;
-        System.out.println("Please enter current month deposit.");
-        double deposit = input.nextDouble();
-        System.out.println("Please enter current month withdrawal.");
-        double withdrawal = input.nextDouble();
 
-        balance += interestAmount;
-        System.out.println("Current month balance is... " + balance);
+        // Use for-each here
+        enum Months{
+            January, February, March, April, May, June, July, August, September, October, November, December
+        }
+
+        for (int i = 0; i < 11; i++){
+            System.out.println("Please enter current month deposit.");
+            double deposit = input.nextDouble();
+            System.out.println("Please enter current month withdrawal.");
+            double withdrawal = input.nextDouble();
+            balance += interestAmount;
+            System.out.println("Current month balance is... " + balance);
+        }
+        
+        System.out.println("Standing balance is... " + balance);
     }
 
     public static void problemThree(){
@@ -100,6 +112,38 @@ public class HomeworkFourLoops{
         int index = 0;
         while (true) { 
             s += index;
+            while (true) { 
+                t *= index;
+            }
+            s *= t;
+            System.out.println("T is " + t);
+        }
+        System.out.println("S is " + s);
+    }
+
+    public static void problemFour(int n){
+        //Q4.6 Write a for statement to compute the sum 1 + 22 + 32 + 42 + 52 + ... + n2.
+        int sum = 0;
+        System.out.println("LOOP START: SUM IS: " + sum);
+
+        for (int i = 1; i < n + 1; i++) {
+            sum += i^2;
+            System.out.println("Current sum is: " + sum);
+        }
+        
+        System.out.println("LOOP FINISH");
+    }
+
+    public static void problemSix(){
+    //Q4.12 Define an enumeration for each of the months of the year. 
+        //Use a for-each statement to display each month.
+
+        enum Months{
+            January, February, March, April, May, June, July, August, September, October, November, December
+        }
+
+        for (Months m : Months.values()) {
+            System.out.println(m);
         }
     }
 }
