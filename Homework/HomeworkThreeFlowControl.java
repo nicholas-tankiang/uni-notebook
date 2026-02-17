@@ -102,7 +102,7 @@ public class HomeworkThreeFlowControl{
         If the value is over $1,000, we will charge $40 plus 1 percent of the amount. 
         Use a multibranch if-else statement in a fragment of code to compute the service charge.
     */
-        int chargeAmount = 0;
+        double chargeAmount = 0;
 
         // guard clause; if negative number entered, exit method
         if (checkAmount < 0){
@@ -113,11 +113,14 @@ public class HomeworkThreeFlowControl{
             chargeAmount = 1;
             return chargeAmount;
         } else if (checkAmount > 10 && checkAmount < 100) {
-            return chargeAmount * 0.1;
+            chargeAmount = checkAmount * 0.1;
+            return chargeAmount;
         } else if (checkAmount > 100 && checkAmount < 1000) {
-            return (chargeAmount * 0.05) + 5;
+            chargeAmount = (checkAmount * 0.05) + 5;
+            return chargeAmount;
         } else if (checkAmount > 1000) {
-            return (chargeAmount * 0.01) + 40;
+            chargeAmount = (checkAmount * 0.01) + 40;
+            return chargeAmount;
         }
 
         System.out.println("ERROR: Invalid input entered");
