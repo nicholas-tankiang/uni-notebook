@@ -191,6 +191,7 @@ public class HomeworkThreeFlowControl{
     */
 
     public static double problemSixIfElse(String letter){
+        // problemSix cont.
         // 2. Write a fragment of code that will do the conversion using a multibranch if-else statement.
         double gradeValue = 0;
 
@@ -244,6 +245,7 @@ public class HomeworkThreeFlowControl{
     }
 
     public static double problemSixNestedSwitch(String letter){
+        // problemSix cont.
         // 3. Write a fragment of code that will do the conversion using nested switch statements.
         double gradeValue = 0;
 
@@ -314,8 +316,6 @@ public class HomeworkThreeFlowControl{
                 }
                 break;
         }
-
-        System.out.println("ERROR");
         return gradeValue;
     }
 
