@@ -5,14 +5,15 @@ public class HomeworkThreeFlowControl{
         Scanner keyboard = new Scanner(System.in);
 
         // Problem 5 setup
-        System.out.println("ENTER LETTER");
+        System.out.println("ENTER LETTER A THROUGH F");
         String letter = keyboard.nextLine();
-        System.out.println("gradeValue's result is: " + problemFive(letter));
+        System.out.println("5: gradeValue's result is: " + problemFive(letter));
 
         // Problem 6 setup
-        System.out.println("ENTER LETTER");
+        System.out.println("ENTER LETTER AND/OR SIGN, A THROUGH F");
         letter = keyboard.nextLine();
-        System.out.println("gradeValue's result is: " + problemFive(letter));
+        System.out.println("6 IF-ELSE: gradeValue's result is: " + problemSixIfElse(letter));
+        System.out.println("6 NESTED SWITCH: gradeValue's result is: " + problemSixNestedSwitch(letter));
 
         // Problem 7 setup
         System.out.println("INPUT 1 REQUEST");
@@ -169,7 +170,7 @@ public class HomeworkThreeFlowControl{
                 gradeValue = 0.0;
                 System.out.println("ERROR");
                 return gradeValue;
-            }
+        }
     }
 
     /*
@@ -244,6 +245,74 @@ public class HomeworkThreeFlowControl{
         // 3. Write a fragment of code that will do the conversion using nested switch statements.
         double gradeValue = 0;
 
+        // Gets base letter
+        char letterPos = letter.charAt(0);
+        // Must declare letterSignPos here to let variable be available to rest of method
+        char letterSignPos = 0;
+
+        // Gets sign if letter is longer than one
+        if (letter.length() > 1) {
+            letterSignPos = letter.charAt(1);
+        }
+
+        switch (letterPos) {
+            case 'A':
+                gradeValue = 4.0;
+                switch (letterSignPos) {
+                    case '+':
+                        gradeValue = 4.25;
+                        break;
+                    case '-':
+                        gradeValue = 3.75;
+                        break;
+                }
+                break;
+            case 'B':
+                gradeValue = 4.0;
+                switch (letterSignPos) {
+                    case '+':
+                        gradeValue = 4.25;
+                        break;
+                    case '-':
+                        gradeValue = 3.75;
+                        break;
+                }
+                break;
+            case 'C':
+                gradeValue = 4.0;
+                switch (letterSignPos) {
+                    case '+':
+                        gradeValue = 4.25;
+                        break;
+                    case '-':
+                        gradeValue = 3.75;
+                        break;
+                }
+                break;
+            case 'D':
+                gradeValue = 4.0;
+                switch (letterSignPos) {
+                    case '+':
+                        gradeValue = 4.25;
+                        break;
+                    case '-':
+                        gradeValue = 3.75;
+                        break;
+                }
+                break;
+            case 'F':
+                gradeValue = 4.0;
+                switch (letterSignPos) {
+                    case '+':
+                        gradeValue = 4.25;
+                        break;
+                    case '-':
+                        gradeValue = 3.75;
+                        break;
+                }
+                break;
+        }
+
         System.out.println("ERROR");
         return gradeValue;
     }
@@ -283,8 +352,6 @@ public class HomeworkThreeFlowControl{
         }
     }
 }
-
-
 
 /*
 // IGNORE: Polymorphism class test
