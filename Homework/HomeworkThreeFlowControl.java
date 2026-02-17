@@ -110,10 +110,10 @@ public class HomeworkThreeFlowControl{
         if (checkAmount < 10) {
             chargeAmount = 1;
             return chargeAmount;
-        } else if (checkAmount > 10 && checkAmount < 100) {
+        } else if (checkAmount < 100) {
             chargeAmount = checkAmount * 0.1;
             return chargeAmount;
-        } else if (checkAmount > 100 && checkAmount < 1000) {
+        } else if (checkAmount < 1000) {
             chargeAmount = (checkAmount * 0.05) + 5;
             return chargeAmount;
         } else if (checkAmount > 1000) {
