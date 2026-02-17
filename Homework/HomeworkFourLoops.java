@@ -80,12 +80,12 @@ public class HomeworkFourLoops{
         }
 
         for (int i = 0; i < 11; i++){
-            System.out.println("Please enter current month deposit.");
+            System.out.println("Please enter " + Months.values()[i] +" deposit.");
             double deposit = input.nextDouble();
-            System.out.println("Please enter current month withdrawal.");
+            System.out.println("Please enter " + Months.values()[i] +" withdrawal.");
             double withdrawal = input.nextDouble();
             balance += interestAmount;
-            System.out.println("Current month balance is... " + balance);
+            System.out.println(Months.values()[i] + " balance is... " + balance);
         }
         
         System.out.println("Standing balance is... " + balance);
@@ -130,7 +130,7 @@ public class HomeworkFourLoops{
             sum += i^2;
             System.out.println("Current sum is: " + sum);
         }
-        
+
         System.out.println("LOOP FINISH");
     }
 
