@@ -272,46 +272,46 @@ public class HomeworkThreeFlowControl{
                 }
                 break;
             case 'B':
-                gradeValue = 4.0;
+                gradeValue = 3.0;
                 switch (letterSignPos) {
                     case '+':
-                        gradeValue = 4.25;
+                        gradeValue = 3.25;
                         break;
                     case '-':
-                        gradeValue = 3.75;
+                        gradeValue = 2.75;
                         break;
                 }
                 break;
             case 'C':
-                gradeValue = 4.0;
+                gradeValue = 2.0;
                 switch (letterSignPos) {
                     case '+':
-                        gradeValue = 4.25;
+                        gradeValue = 2.25;
                         break;
                     case '-':
-                        gradeValue = 3.75;
+                        gradeValue = 1.75;
                         break;
                 }
                 break;
             case 'D':
-                gradeValue = 4.0;
+                gradeValue = 1.0;
                 switch (letterSignPos) {
                     case '+':
-                        gradeValue = 4.25;
+                        gradeValue = 1.25;
                         break;
                     case '-':
-                        gradeValue = 3.75;
+                        gradeValue = 0.75;
                         break;
                 }
                 break;
             case 'F':
-                gradeValue = 4.0;
+                gradeValue = 0.0;
                 switch (letterSignPos) {
                     case '+':
-                        gradeValue = 4.25;
+                        gradeValue = 0.25;
                         break;
                     case '-':
-                        gradeValue = 3.75;
+                        gradeValue = 0.0;
                         break;
                 }
                 break;
