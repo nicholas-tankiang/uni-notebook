@@ -138,10 +138,7 @@ public class HomeworkThreeFlowControl{
         1. false
         2. true
         3. true
-        4. 
-        //(!(true) AND true OR true)
-        //(false OR true)
-        true
+        4. true
     */
 
     public static double problemFive(String letter){
