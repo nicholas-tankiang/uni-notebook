@@ -6,13 +6,27 @@ public class HomeworkFourLoops{
 
         // Problem 1 setup
         System.out.println("1: ENTER WORD");
-        String userInput = input.nextLine();
-        problemOneWhile(userInput);
+        String userInputOne = input.nextLine();
+        problemOneWhile(userInputOne);
         problemOneDoWhile();
 
+        // Problem 2 
         problemTwo();
 
+        // Problem 3
+        problemThree();
 
+        // Problem 4 setup
+        System.out.println("4: ENTER SOME POSITIVE NUMBER N");
+        int userInputFour = input.nextInt();
+        problemFour(userInputFour);
+
+        // Problem 5 setup
+        System.out.println("5: ENTER SOME POSITIVE NUMBER N");
+        int userInputFive = input.nextInt();
+        problemFive(userInputFive);
+
+        // Problem 6
         problemSix();
     }
 
@@ -114,6 +128,8 @@ public class HomeworkFourLoops{
         System.out.println("S is " + s);
     }
     */
+        System.out.println("Problem THREE : START");
+
         int i = 0;
         int j = 0;
         int s = 0;
@@ -136,6 +152,8 @@ public class HomeworkFourLoops{
 
     public static void problemFour(int n){
         //Q4.6 Write a for statement to compute the sum 1 + 22 + 32 + 42 + 52 + ... + n^2.
+        System.out.println("Problem FOUR : START");
+
         int sum = 0;
         System.out.println("LOOP START: SUM IS: " + sum);
 
@@ -149,6 +167,7 @@ public class HomeworkFourLoops{
 
     public static void problemFive(int n){
         // Q4.7 Repeat the previous question but use the comma operator and omit the for-statement’s body.
+        System.out.println("Problem FIVE : START");
 
         int sum = 0;
         System.out.println("LOOP START: SUM IS: " + sum);
@@ -161,6 +180,7 @@ public class HomeworkFourLoops{
     public static void problemSix(){
     //Q4.12 Define an enumeration for each of the months of the year. 
         //Use a for-each statement to display each month.
+        System.out.println("Problem SIX : START");
 
         enum Months{
             January, February, March, April, May, June, July, August, September, October, November, December
