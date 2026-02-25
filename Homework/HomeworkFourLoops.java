@@ -14,14 +14,6 @@ public class HomeworkFourLoops{
         problemSix();
     }
 
-    /*
-    
-
-    Q4.6 Write a for statement to compute the sum 1 + 22 + 32 + 42 + 52 + ... + n2.
-
-    Q4.7 Repeat the previous question but use the comma operator and omit the for-statement’s body.
-    */
-
     public static void problemOneWhile(String userInput){
     /*
     Q4.1: 
@@ -134,6 +126,21 @@ public class HomeworkFourLoops{
         System.out.println("LOOP FINISH");
     }
 
+    public static void problemFive(int n){
+        // Q4.7 Repeat the previous question but use the comma operator and omit the for-statement’s body.
+        /*
+        int sum = 0;
+        System.out.println("LOOP START: SUM IS: " + sum);
+
+        for (int i = 1; i < n + 1; i++) {
+            sum += i^2;
+            System.out.println("Current sum is: " + sum);
+        }
+
+        System.out.println("LOOP FINISH");
+        */
+    }
+
     public static void problemSix(){
     //Q4.12 Define an enumeration for each of the months of the year. 
         //Use a for-each statement to display each month.
@@ -146,4 +153,48 @@ public class HomeworkFourLoops{
             System.out.println(m);
         }
     }
+
+    /*
+    problemSeven: 
+    What does the following fragment of code display? 
+    What do you think the programmer intended the code to do, and how would you fix it?
+
+    A: It seems that the intention of this chunk of code is to take the product of all numbers from
+    0 to the value provided by max using a loop. The issue occurs in the first loop as the product variable,
+    which was originally 1, is multiplied by the start of the loop, 0, resulting in the only variable holding
+    the value to be set to 0. This is a problem because every succeeding loop, i is multiplied by 0, erasing
+    the value completely. 
+
+    To fix this issue, the programmer can simply add the result of each loop back into product instead of setting
+    it to a new value. So, instead of:
+
+    product = product * i
+
+    Do:
+
+    product = product + (product * i)
+
+    By adding, we no longer have to deal with issues from multiplying product by 0.
+    */
+
+    /*
+    problemEight:
+    Q4.19 What does the following fragment of code display? 
+    What do you think the programmer intended the code to do, and how would you fix it?
+
+    A: The programmer's intention seems to be similar to the previous problem, but with the addition of 
+    also tracking a "product" variable, that is the product of product's value multiplied by iterator i,
+    within the loop. So at i = 1, the sum will be 0 + 1, and product will be 1 * 1.
+
+    The issue is that, ignoring the lack of a space between int and product, the for loop lacks braces.
+    This is a problem because the loop is executing more than a single statement, therefore it needs braces.
+    To fix this, we would add braces to the statement like so:
+
+    for (int i = i; i <= max; i++) {
+        sum = sum + i;
+        product = product * i;
+    }
+    System.out.println("PRINT TEXT...")
+
+    */
 }
