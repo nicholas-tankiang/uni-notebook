@@ -100,29 +100,32 @@ public class HomeworkFourLoops{
     }
     */
         int i = 0;
-        int j = i;
+        int j = 0;
         int s = 0;
         int t = 1;
         while (i < 10) { 
             s += i;
-            i++;
+            j = i;
+            
             while (j > 0) { 
                 t *= (j - i);
                 j--;
             }
             s *= t;
             System.out.println("T is " + t);
+
+            i++;
         }
         System.out.println("S is " + s);
     }
 
     public static void problemFour(int n){
-        //Q4.6 Write a for statement to compute the sum 1 + 22 + 32 + 42 + 52 + ... + n2.
+        //Q4.6 Write a for statement to compute the sum 1 + 22 + 32 + 42 + 52 + ... + n^2.
         int sum = 0;
         System.out.println("LOOP START: SUM IS: " + sum);
 
-        for (int i = 1; i < n + 1; i++) {
-            sum += i^2;
+        for (int i = 1; i <= n*n; i++) {
+            sum += i * i;
             System.out.println("Current sum is: " + sum);
         }
 
@@ -131,17 +134,13 @@ public class HomeworkFourLoops{
 
     public static void problemFive(int n){
         // Q4.7 Repeat the previous question but use the comma operator and omit the for-statement’s body.
-        /*
+
         int sum = 0;
         System.out.println("LOOP START: SUM IS: " + sum);
 
-        for (int i = 1; i < n + 1; i++) {
-            sum += i^2;
-            System.out.println("Current sum is: " + sum);
-        }
+        for (int i = 1; i <= n * n; sum += i * i, i++) ;
 
-        System.out.println("LOOP FINISH");
-        */
+        System.out.println("LOOP FINISH. SUM IS: " + sum);
     }
 
     public static void problemSix(){
