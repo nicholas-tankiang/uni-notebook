@@ -151,13 +151,13 @@ public class HomeworkFourLoops{
     }
 
     public static void problemFour(int n){
-        //Q4.6 Write a for statement to compute the sum 1 + 22 + 32 + 42 + 52 + ... + n^2.
+        //Q4.6 Write a for statement to compute the sum 1 + 2^2 + 3^2 + 4^2 + 5^2 + ... + n^2.
         System.out.println("Problem FOUR : START");
 
         int sum = 0;
         System.out.println("LOOP START: SUM IS: " + sum);
 
-        for (int i = 1; i <= n*n; i++) {
+        for (int i = 1; i <= n; i++) {
             sum += i * i;
             System.out.println("Current sum is: " + sum);
         }
@@ -172,7 +172,7 @@ public class HomeworkFourLoops{
         int sum = 0;
         System.out.println("LOOP START: SUM IS: " + sum);
 
-        for (int i = 1; i <= n * n; sum += i * i, i++) ;
+        for (int i = 1; i <= n; sum += i * i, i++) ;
 
         System.out.println("LOOP FINISH. SUM IS: " + sum);
     }
