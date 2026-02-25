@@ -8,7 +8,9 @@ public class HomeworkFourLoops{
         System.out.println("1: ENTER WORD");
         String userInput = input.nextLine();
         problemOneWhile(userInput);
-        problemOneDoWhile(userInput);
+        problemOneDoWhile();
+
+        problemTwo();
 
 
         problemSix();
@@ -22,29 +24,38 @@ public class HomeworkFourLoops{
         For the required loop, use a
         a. while statement
     */
-        boolean isSameChar = true;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Problem One - While : START");
 
-        while (isSameChar){
+        // while word is not "done"
+        while (!userInput.equals("done")){
             // If input first char equals last char of input
             if (userInput.charAt(0) == (userInput.charAt(userInput.length() - 1))){
-                System.out.println("Match found");
-                break;
+                System.out.println("Char equals last char");
+            } else {
+                System.out.println("First char does not equal last char");
             }
-            System.out.println("First char does not equal last char, try again...");
+            // get next input
+            userInput = input.nextLine();
         }
     }
 
-    public static void problemOneDoWhile(String userInput){
+    public static void problemOneDoWhile(){
         // Q4.1 cont.
         // b. do-while statement
-        boolean isSameChar = true;
+        Scanner input = new Scanner(System.in);
+        String userInput;
+        System.out.println("Problem One - Do While : START");
+        System.out.println("1 CONT: ENTER WORD");
 
         do {
+            userInput = input.nextLine();
             if (userInput.charAt(0) == (userInput.charAt(userInput.length() - 1))){
-                System.out.println("Match found");
-                break;
+                System.out.println("Char equals last char");
+            } else {
+                System.out.println("First char does not equal last char");
             }
-        } while (isSameChar);
+        } while (!userInput.equals("done"));
     }
 
     public static void problemTwo(){
@@ -55,29 +66,33 @@ public class HomeworkFourLoops{
         Interest is added to the account at the beginning of each month. 
         The monthly interest rate is the yearly percentage rate divided by 12.
     */
-        //PROMPT DEPOSIT
-        //PROMPT WITHDRAWAL
-        //ADD INTERESTE
-        //BALANCE = CURRENT BALANCE + INTEREST RATE 
-        //INTEREST RATE = YEARLY PERCENTAGE RATE / 12
+        System.out.println("Problem Two : START");
+
         Scanner input = new Scanner(System.in);
-        double annualPercentRate = 0;
-        double interestAmount = annualPercentRate / 12;
+
+        // set annual rate by user
+        System.out.println("ENTER ANNUAL PERCENT RATE");
+        double annualPercentRate = input.nextDouble();
+        // assume percent input
+        double monthlyRate = (annualPercentRate / 100) / 12;
 
         double balance = 0;
 
-        // Use for-each here
         enum Months{
             January, February, March, April, May, June, July, August, September, October, November, December
         }
+        Months[] months = Months.values();
 
         for (int i = 0; i < 12; i++){
-            System.out.println("Please enter " + Months.values()[i] +" deposit.");
-            double deposit = input.nextDouble();
-            System.out.println("Please enter " + Months.values()[i] +" withdrawal.");
-            double withdrawal = input.nextDouble();
-            balance += interestAmount;
-            System.out.println(Months.values()[i] + " balance is... " + balance);
+            balance += balance * monthlyRate;
+
+            System.out.println("Please enter amount for " + months[i] +
+            ". Positive for deposit, negative for withdrawal.");
+            double amount = input.nextDouble();
+
+            balance += amount;
+            
+            System.out.println(months[i] + " balance is... " + balance);
         }
         
         System.out.println("Standing balance is... " + balance);
