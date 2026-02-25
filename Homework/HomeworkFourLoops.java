@@ -71,7 +71,7 @@ public class HomeworkFourLoops{
             January, February, March, April, May, June, July, August, September, October, November, December
         }
 
-        for (int i = 0; i < 11; i++){
+        for (int i = 0; i < 12; i++){
             System.out.println("Please enter " + Months.values()[i] +" deposit.");
             double deposit = input.nextDouble();
             System.out.println("Please enter " + Months.values()[i] +" withdrawal.");
@@ -99,13 +99,16 @@ public class HomeworkFourLoops{
         System.out.println("S is " + s);
     }
     */
+        int i = 0;
+        int j = i;
         int s = 0;
         int t = 1;
-        int index = 0;
-        while (true) { 
-            s += index;
-            while (true) { 
-                t *= index;
+        while (i < 10) { 
+            s += i;
+            i++;
+            while (j > 0) { 
+                t *= (j - i);
+                j--;
             }
             s *= t;
             System.out.println("T is " + t);
