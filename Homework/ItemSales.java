@@ -8,12 +8,39 @@
 // • Bulk discount percentage
 
 public class ItemSales{
-    public int totalSold;
-    public double totalSale;
-    public double totalDiscount;
-    public double itemCost;
-    public int quantityBulk;
-    public double quantityBulkDiscount;
+    private int totalSold;
+    private double totalSale;
+    private double totalDiscount;
+    private double itemCost;
+    private int quantityBulk;
+    private double quantityBulkDiscount;
+
+    // ItemSales Constructor
+    public ItemSales(int sold, double sales, double discounts, double cost, int bulk, double bulkDiscount){
+        this.totalSold = sold;
+        this.totalSale = sales;
+        this.totalDiscount = discounts;
+        this.itemCost = cost;
+        this.quantityBulk = bulk;
+        this.quantityBulkDiscount = bulkDiscount;
+    }
+
+    // Getter Methods
+    public int getTotalSold(){
+        return this.totalSold;
+    }
+
+    public double getItemCost(){
+        return this.itemCost;
+    }
+
+    public double getBulkQuantity(){
+        return this.quantityBulk;
+    }
+
+    public double getBulkDiscountPercent(){
+        return this.quantityBulkDiscount;
+    }
 
     // registerSale(n) records the sale of n items. If n is larger than the bulk
     // quantity, the cost per item will be reduced by the bulk discount.
