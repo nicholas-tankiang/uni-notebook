@@ -62,8 +62,15 @@ public class PersonAddress{
         this.teleNumber = phoneNo;
     }
 
-    // Insert conditions
-    public void sameNameTest(){
-        
+    // +PRE: PersonAddress object with name attributes
+    // -POST: Return Same name if first+lastname equivalent, otherwise Not same name
+    public void sameNameTest(PersonAddress otherPerson){
+        String thisFullName = this.firstName + this.lastName;
+        String otherFullName = otherPerson.firstName + otherPerson.lastName;
+        if (thisFullName.equals(otherFullName)){
+            System.out.print("Same name");
+        } else {
+            System.out.print("Not same name");
+        }
     }
 }
