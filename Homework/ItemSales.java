@@ -6,26 +6,27 @@
 // • Cost per item
 // • Bulk quantity
 // • Bulk discount percentage
-// and the following methods:
-// • registerSale(n) records the sale of n items. If n is larger than the bulk
-// quantity, the cost per item will be reduced by the bulk discount.
-// • displaySales displays the number sold, the total sales, and total discount.
 
 public class ItemSales{
-    private int totalSold;
-    private double totalSale;
-    private double totalDiscount;
-    private int itemCost;
-    private int quantityBulk;
-    private double quantityBulkDiscount;
+    public int totalSold;
+    public double totalSale;
+    public double totalDiscount;
+    public double itemCost;
+    public int quantityBulk;
+    public double quantityBulkDiscount;
 
+    // registerSale(n) records the sale of n items. If n is larger than the bulk
+    // quantity, the cost per item will be reduced by the bulk discount.
     public void registerSale(int n){
         if (n > this.quantityBulk){
-            itemCost -= quantityBulkDiscount;
+            this.itemCost *= (1 - this.quantityBulkDiscount);
+            // round to one decimal to match expected values
+            this.itemCost = Math.round(this.itemCost * 10.0) / 10.0;
         }
     }
 
+    // displaySales displays the number sold, the total sales, and total discount.
     public void displaySales(){
-        System.out.println(this.totalSold + totalSale + totalDiscount);
+        System.out.println("TotalSold: " + this.totalSold + " | TotalSales: " + this.totalSale + " | TotalDiscount: " + this.totalDiscount);
     }
 }
