@@ -2,7 +2,7 @@ public class ItemSalesDemo{
     public static void main(String[] args) {
         ItemSales productOne = new ItemSales();
 
-        // Testing var assignments
+        // var assignments for testing
         productOne.totalSold = 5;
         productOne.totalSale = 15;
         productOne.totalDiscount = 3;
@@ -21,7 +21,6 @@ public class ItemSalesDemo{
         } else {
             System.out.println("PASS, expect: " + productOne.itemCost);
         }
-
 
         // Test display sale
         System.out.println("2: DISPLAY_SALE_TEST");

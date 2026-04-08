@@ -21,6 +21,14 @@ public class PersonAddress{
     private String emailAddress;
     private String teleNumber;
 
+    // PersonAddress Constructor
+    public PersonAddress(String first, String last, String email, String phoneNo){
+        this.firstName = first;
+        this.lastName = last;
+        this.emailAddress = email;
+        this.teleNumber = phoneNo;
+    }
+
     // +PRE: N/A
     // -POST: String
     public String getFirstName(){

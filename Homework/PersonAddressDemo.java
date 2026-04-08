@@ -1,11 +1,9 @@
     public static void main(String[] args) {
-        ItemSales productOne = new ItemSales();
+        // Testing var assignments via constructor
+        PersonAddress humanOne = new PersonAddress("James", "May", "james.may@hotmail.com", "01377 241241");
+        PersonAddress humanTwo = new PersonAddress("John", "Hammond", "jham@gmail.com", "0141-420-4050");
 
-        // Testing var assignments
-        productOne.totalSold = 5;
-        productOne.totalSale = 15;
-        productOne.totalDiscount = 3;
-        productOne.itemCost = 6;
-        productOne.quantityBulk = 3;
-        productOne.quantityBulkDiscount = 0.05;
+
+        
+        
     }
