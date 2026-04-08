@@ -37,7 +37,7 @@ public class PersonAddress{
 
     // +PRE: N/A
     // -POST: String
-    public String getLateName(){
+    public String getLastName(){
         return this.lastName;
     }
 
