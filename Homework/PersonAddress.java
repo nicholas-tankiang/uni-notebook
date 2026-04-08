@@ -21,11 +21,44 @@ public class PersonAddress{
     private String emailAddress;
     private String teleNumber;
 
+    // +PRE: N/A
+    // -POST: String
+    public String getFirstName(){
+        return this.firstName;
+    }
+
+    // +PRE: N/A
+    // -POST: String
+    public String getLateName(){
+        return this.lastName;
+    }
+
+    // +PRE: N/A
+    // -POST: String
+    public String getEmail(){
+        return this.emailAddress;
+    }
+
+    // +PRE: N/A
+    // -POST: String
+    public String getTele(){
+        return this.teleNumber;
+    }
+
+    // +PRE: Single text string (whitespace okay, removed later)
+    // -POST: no output
     public void setEmail(String email){
+        // remove whitespace from email
+        email = email.replaceAll(email, "");
         this.emailAddress = email;
     }
 
+    // +PRE: Single text string, only numbers
+    // -POST: no output
     public void setTele(String phoneNo){
+        phoneNo = phoneNo.replaceAll(phoneNo, "");
+        // remove "-"
+        phoneNo = phoneNo.replace("-", ""); 
         this.teleNumber = phoneNo;
     }
 
