@@ -16,10 +16,18 @@
 
 public class PersonAddress{
 
-    String firstName;
-    String lastName;
-    String emailAddress;
-    int teleNumber;
+    private String firstName;
+    private String lastName;
+    private String emailAddress;
+    private String teleNumber;
+
+    public void setEmail(String email){
+        this.emailAddress = email;
+    }
+
+    public void setTele(String phoneNo){
+        this.teleNumber = phoneNo;
+    }
 
     // Insert conditions
     public void sameNameTest(){
