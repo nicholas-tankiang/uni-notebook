@@ -25,7 +25,7 @@ public class ItemSalesDemo{
 
         // Test display sale
         System.out.println("2: DISPLAY_SALE_TEST");
-        System.out.println("EXPECTED:\nTotalSold: 5 | TotalSales: 15 | TotalDiscount: 3");
+        System.out.println("EXPECTED:\nTotalSold: 5 | TotalSales: 15.0 | TotalDiscount: 3.0");
         System.out.println("ACTUAL: ");
         productOne.displaySales();
 
