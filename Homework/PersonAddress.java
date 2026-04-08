@@ -57,14 +57,14 @@ public class PersonAddress{
     // -POST: no output
     public void setEmail(String email){
         // remove whitespace from email
-        email = email.replaceAll(email, "");
+        email = email.replaceAll("\\s", "");
         this.emailAddress = email;
     }
 
     // +PRE: Single text string, only numbers
     // -POST: no output
     public void setTele(String phoneNo){
-        phoneNo = phoneNo.replaceAll(phoneNo, "");
+        phoneNo = phoneNo.replaceAll("\\s", "");
         // remove "-"
         phoneNo = phoneNo.replace("-", ""); 
         this.teleNumber = phoneNo;
