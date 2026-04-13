@@ -14,21 +14,6 @@
 // case for each of the test methods.
 // HOMEWORK 3:
 
-// • 
-
-// • setAge(age)—sets the age of the person.
-// • createToddler—a static method that returns a special instance of the class
-// to represent a toddler. The instance has the name “A toddler” and the age 2.
-// • createPreschooler—a static method that returns a special instance of the
-// class to represent a preschooler. The instance has the name “A preschooler”
-// and the age 5.
-// • createAdolescent—a static method that returns a special instance of the
-// class to represent an adolescent. The instance has the name “An adolescent”
-// and the age 9.
-// • createTeenager—a static method that returns a special instance of the class 
-// to represent a teenager. The instance has the name “A teenager” and the age
-// 15.
-
 public class Person{
 
     private String name;
@@ -106,7 +91,7 @@ public class Person{
         return newName;
     }
 
-
+    // setAge(age)—sets the age of the person.
     public int setAge(int newAge){
         if (newAge < 0){
             System.out.println("ERROR: NEG AGE");
@@ -115,6 +100,35 @@ public class Person{
         return newAge;
     }
 
-    
+    // • createToddler—a static method that returns a special instance of the class
+    // to represent a toddler. The instance has the name “A toddler” and the age 2.
+    public Person createToddler(){
+        Person defaultToddler = new Person("A toddler", 2);
+        return defaultToddler;
+    }
+
+    // • createPreschooler—a static method that returns a special instance of the
+    // class to represent a preschooler. The instance has the name “A preschooler”
+    // and the age 5.
+    public Person createPreschooler(){
+        Person defaultPresch = new Person("A preschooler", 5);
+        return defaultPresch;
+    }
+
+    // • createAdolescent—a static method that returns a special instance of the
+    // class to represent an adolescent. The instance has the name “An adolescent”
+    // and the age 9.
+    public Person createAdolescent(){
+        Person defaultAdolescent = new Person("A adolescent", 9);
+        return defaultAdolescent;
+    }
+
+    // • createTeenager—a static method that returns a special instance of the class 
+    // to represent a teenager. The instance has the name “A teenager” and the age
+    // 15.
+    public Person createTeenager(){
+        Person defaultTeenager = new Person("A teenager", 15);
+        return defaultTeenager;
+    }
 
 }
