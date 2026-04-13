@@ -9,10 +9,7 @@
 // respectively.
 
 // Repeat Programming Project 2 in Chapter 5 (Same Person Class in Homework
-// 1). This time, add the following four constructor methods: one
-// for each instance variable, one with two parameters for the two instance
-// variables, and a default constructor. Be sure that each constructor sets all of
-// the instance variables. Write a driver program to test each of the methods,
+// Write a driver program to test each of the methods,
 // including each of the four constructors and at least one true and one false
 // case for each of the test methods.
 // HOMEWORK 3:
@@ -37,7 +34,10 @@ public class Person{
     private String name;
     private int age;
 
-    // PersonAddress Constructor
+    // add the following four constructor methods: one
+    // for each instance variable, one with two parameters for the two instance
+    // variables, and a default constructor. Be sure that each constructor sets all of
+    // the instance variables. 
 
     // a. Write a default constructor for Person that sets name to the string "No
     // name yet" and age to zero.
@@ -50,6 +50,14 @@ public class Person{
     // age to a given age
     public Person(String newName, int newAge){
         this.name = setName(newName);
+        this.age = setAge(newAge);
+    }
+
+    public Person(String newName){
+        this.name = setName(newName);
+    }
+
+    public Person(int newAge){
         this.age = setAge(newAge);
     }
 
