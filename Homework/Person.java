@@ -7,30 +7,24 @@
 // represent a person. The class has instance variables for a person’s name,
 // which is a string, and an integer of age. These variables are name and age,
 // respectively.
-// a. Write a default constructor for Person that sets name to the string "No
-// name yet" and age to zero.
+
 // b. Write a second constructor for Person that sets name to a given string and
 // age to a given age.
 // c. Write a static method createAdult() for Person that returns a special
 // instance of this class. The instance represents a generic adult and has the
 // name “An adult” and the age 21.
 
-// Repeat Programming Project 2 in Chapter 5 (Same Person Class in
-// Homework 1). This time, add the following four constructor methods: one
+// Repeat Programming Project 2 in Chapter 5 (Same Person Class in Homework
+// 1). This time, add the following four constructor methods: one
 // for each instance variable, one with two parameters for the two instance
 // variables, and a default constructor. Be sure that each constructor sets all of
 // the instance variables. Write a driver program to test each of the methods,
 // including each of the four constructors and at least one true and one false
 // case for each of the test methods.
 // HOMEWORK 3:
-// Complete and fully test the class Person. Include the following additional
-// methods:
-// • getName—returns the name of the person as a string.
+
 // • getAge—returns the age of the person.
-// • setName(first, last)—sets the name of the person, given a first and last
-// name as strings.
-// • setName(name)—sets the name of the person, given the entire name as one
-// string.
+
 // • setAge(age)—sets the age of the person.
 // • createToddler—a static method that returns a special instance of the class
 // to represent a toddler. The instance has the name “A toddler” and the age 2.
@@ -43,3 +37,76 @@
 // • createTeenager—a static method that returns a special instance of the class 
 // to represent a teenager. The instance has the name “A teenager” and the age
 // 15.
+
+public class Person{
+
+    private String name;
+    private int age;
+
+    // PersonAddress Constructor
+    public Person(String newName, int newAge){
+
+        this.name = setName(newName);
+        this.age = setAge(newAge);
+
+    }
+
+    public Person(String newFirst, String newLast){
+        this.firstName = newFirst;
+        this.lastName = newLast;
+        this.emailAddress = "";
+        this.teleNumber = "";
+    }
+
+    // a. Write a default constructor for Person that sets name to the string "No
+    // name yet" and age to zero.
+    public Person(){
+        this.firstName = "No first name yet";
+        this.lastName = "No last name yet";
+        this.emailAddress = "";
+        this.teleNumber = "";
+    }
+
+        // Complete and fully test the class Person. Include the following additional
+        // methods:
+
+        // • getName—returns the name of the person as a string.
+        
+        // • setName(first, last)—sets the name of the person, given a first and last
+        // name as strings.
+    public String setName(String firstName, String lastName){
+        if (firstName.length() == 0 || 
+            lastName.length() == 0){
+            System.out.println("ERROR: EMPTY NAME");
+            System.exit(0);
+        } 
+        // remove whitespace from name
+        firstName = firstName.replaceAll("\\s", "");
+        lastName = lastName.replaceAll("\\s", "");
+        return firstName + " " + lastName;
+    }
+        // • setName(name)—sets the name of the person, given the entire name as one
+        // string.
+
+
+    public int setAge(int newAge){
+        if (newAge < 0){
+            System.out.println("ERROR: NEG AGE");
+            System.exit(0);
+        } 
+        return newAge;
+    }
+
+    // +PRE: N/A
+    // -POST: String
+    public String getName(){
+        return this.name;
+    }
+
+    // +PRE: N/A
+    // -POST: int
+    public int getAge(){
+        return this.age;
+    }
+
+}
