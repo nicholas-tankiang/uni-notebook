@@ -8,12 +8,6 @@
 // which is a string, and an integer of age. These variables are name and age,
 // respectively.
 
-// b. Write a second constructor for Person that sets name to a given string and
-// age to a given age.
-// c. Write a static method createAdult() for Person that returns a special
-// instance of this class. The instance represents a generic adult and has the
-// name “An adult” and the age 21.
-
 // Repeat Programming Project 2 in Chapter 5 (Same Person Class in Homework
 // 1). This time, add the following four constructor methods: one
 // for each instance variable, one with two parameters for the two instance
@@ -23,7 +17,7 @@
 // case for each of the test methods.
 // HOMEWORK 3:
 
-// • getAge—returns the age of the person.
+// • 
 
 // • setAge(age)—sets the age of the person.
 // • createToddler—a static method that returns a special instance of the class
@@ -44,36 +38,43 @@ public class Person{
     private int age;
 
     // PersonAddress Constructor
-    public Person(String newName, int newAge){
-
-        this.name = setName(newName);
-        this.age = setAge(newAge);
-
-    }
-
-    public Person(String newFirst, String newLast){
-        this.firstName = newFirst;
-        this.lastName = newLast;
-        this.emailAddress = "";
-        this.teleNumber = "";
-    }
 
     // a. Write a default constructor for Person that sets name to the string "No
     // name yet" and age to zero.
     public Person(){
-        this.firstName = "No first name yet";
-        this.lastName = "No last name yet";
-        this.emailAddress = "";
-        this.teleNumber = "";
+        this.name = "No name";
+        this.age = 0;
     }
 
-        // Complete and fully test the class Person. Include the following additional
-        // methods:
+    // b. Write a second constructor for Person that sets name to a given string and
+    // age to a given age
+    public Person(String newName, int newAge){
+        this.name = setName(newName);
+        this.age = setAge(newAge);
+    }
 
-        // • getName—returns the name of the person as a string.
-        
-        // • setName(first, last)—sets the name of the person, given a first and last
-        // name as strings.
+    // c. Write a static method createAdult() for Person that returns a special
+    // instance of this class. The instance represents a generic adult and has the
+    // name “An adult” and the age 21.
+    public static Person createAdult(){
+        Person genericAdult = new Person("An adult", 21);
+        return genericAdult;
+    }
+
+    // Include the following additional methods:
+
+    // getName—returns the name of the person as a string.
+    public String getName(){
+        return this.name;
+    }
+
+    // getAge—returns the age of the person.
+    public int getAge(){
+        return this.age;
+    }
+
+    // setName(first, last)—sets the name of the person, given a first and last
+    // name as strings.
     public String setName(String firstName, String lastName){
         if (firstName.length() == 0 || 
             lastName.length() == 0){
@@ -85,8 +86,17 @@ public class Person{
         lastName = lastName.replaceAll("\\s", "");
         return firstName + " " + lastName;
     }
-        // • setName(name)—sets the name of the person, given the entire name as one
-        // string.
+
+    // setName(name)—sets the name of the person, given the entire name as one string.
+    public String setName(String newName){
+        if (newName.length() == 0){
+            System.out.println("ERROR: EMPTY NAME");
+            System.exit(0);
+        } 
+        // remove whitespace from name
+        newName = newName.replaceAll("\\s", "");
+        return newName;
+    }
 
 
     public int setAge(int newAge){
@@ -97,16 +107,6 @@ public class Person{
         return newAge;
     }
 
-    // +PRE: N/A
-    // -POST: String
-    public String getName(){
-        return this.name;
-    }
-
-    // +PRE: N/A
-    // -POST: int
-    public int getAge(){
-        return this.age;
-    }
+    
 
 }
