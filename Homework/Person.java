@@ -8,12 +8,6 @@
 // which is a string, and an integer of age. These variables are name and age,
 // respectively.
 
-// Repeat Programming Project 2 in Chapter 5 (Same Person Class in Homework
-// Write a driver program to test each of the methods,
-// including each of the four constructors and at least one true and one false
-// case for each of the test methods.
-// HOMEWORK 3:
-
 public class Person{
 
     private String name;
