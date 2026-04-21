@@ -21,23 +21,25 @@ public class Person{
     // a. Write a default constructor for Person that sets name to the string "No
     // name yet" and age to zero.
     public Person(){
-        this.name = "No name";
+        this.name = "No name yet";
         this.age = 0;
     }
 
     // b. Write a second constructor for Person that sets name to a given string and
     // age to a given age
     public Person(String newName, int newAge){
-        this.name = setName(newName);
-        this.age = setAge(newAge);
+        setName(newName);
+        setAge(newAge);
     }
 
     public Person(String newName){
-        this.name = setName(newName);
+        setName(newName);
+        this.age = 0;
     }
 
     public Person(int newAge){
-        this.age = setAge(newAge);
+        setAge(newAge);
+        this.name = "NA";
     }
 
     // c. Write a static method createAdult() for Person that returns a special
@@ -62,41 +64,36 @@ public class Person{
 
     // setName(first, last)—sets the name of the person, given a first and last
     // name as strings.
-    public String setName(String firstName, String lastName){
+    public void setName(String firstName, String lastName){
         if (firstName.length() == 0 || 
             lastName.length() == 0){
             System.out.println("ERROR: EMPTY NAME");
             System.exit(0);
         } 
-        // remove whitespace from name
-        firstName = firstName.replaceAll("\\s", "");
-        lastName = lastName.replaceAll("\\s", "");
-        return firstName + " " + lastName;
+        this.name = firstName + " " + lastName;
     }
 
     // setName(name)—sets the name of the person, given the entire name as one string.
-    public String setName(String newName){
+    public void setName(String newName){
         if (newName.length() == 0){
             System.out.println("ERROR: EMPTY NAME");
             System.exit(0);
         } 
-        // remove whitespace from name
-        newName = newName.replaceAll("\\s", "");
-        return newName;
+        this.name = newName;
     }
 
     // setAge(age)—sets the age of the person.
-    public int setAge(int newAge){
+    public void setAge(int newAge){
         if (newAge < 0){
             System.out.println("ERROR: NEG AGE");
             System.exit(0);
         } 
-        return newAge;
+        this.age = newAge;
     }
 
     // • createToddler—a static method that returns a special instance of the class
     // to represent a toddler. The instance has the name “A toddler” and the age 2.
-    public Person createToddler(){
+    public static Person createToddler(){
         Person defaultToddler = new Person("A toddler", 2);
         return defaultToddler;
     }
@@ -104,7 +101,7 @@ public class Person{
     // • createPreschooler—a static method that returns a special instance of the
     // class to represent a preschooler. The instance has the name “A preschooler”
     // and the age 5.
-    public Person createPreschooler(){
+    public static Person createPreschooler(){
         Person defaultPresch = new Person("A preschooler", 5);
         return defaultPresch;
     }
@@ -112,7 +109,7 @@ public class Person{
     // • createAdolescent—a static method that returns a special instance of the
     // class to represent an adolescent. The instance has the name “An adolescent”
     // and the age 9.
-    public Person createAdolescent(){
+    public static Person createAdolescent(){
         Person defaultAdolescent = new Person("A adolescent", 9);
         return defaultAdolescent;
     }
@@ -120,7 +117,7 @@ public class Person{
     // • createTeenager—a static method that returns a special instance of the class 
     // to represent a teenager. The instance has the name “A teenager” and the age
     // 15.
-    public Person createTeenager(){
+    public static Person createTeenager(){
         Person defaultTeenager = new Person("A teenager", 15);
         return defaultTeenager;
     }

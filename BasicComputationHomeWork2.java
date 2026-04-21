@@ -224,7 +224,7 @@ public class BasicComputationHomeWork2{
             } else {
                 System.out.println("Second word in string: " + input5.substring(firstIndex + 1, secondIndex));
             }
-        } 
+        }
     }
 
     // 9) problemNine:
