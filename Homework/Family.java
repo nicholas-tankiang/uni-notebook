@@ -8,7 +8,7 @@ public class Family{
     }
 
     public boolean isPoor(double housingCost, double foodCost){
-        return housingCost + foodCost * this.size > (0.5 * this.income));
+        return housingCost + foodCost * this.size > (0.5 * this.income);
     }
 
     public String toString(){
