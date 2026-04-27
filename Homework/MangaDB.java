@@ -10,4 +10,8 @@ public class MangaDB{
 
     //insert new book entry
 
+    //case no entries found, prompt creation
+
+    //import export list as a csv method
+
 }
