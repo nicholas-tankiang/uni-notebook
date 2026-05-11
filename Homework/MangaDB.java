@@ -1,5 +1,5 @@
-// import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class MangaDB{
     // MANGADB will function as an arraylist instead of an array, because there should not be a fixed size for the array
@@ -71,7 +71,44 @@ public class MangaDB{
     // sorting
 
     public static void main(String[] args) {
+        MangaDB db = new MangaDB();
+        Scanner input = new Scanner(System.in);
+
+        boolean whileRunning = true;
+
         // running loop
+        while (whileRunning) { 
+            //display menu
+            System.out.println("=== MangaDB Options === \n" +
+            "1 : add new manga entry \n" +
+            "2 : display all entries \n" +
+            "3 : search \n" +
+            "4 : exit\n" + 
+            "Type number to select choice.");
+            
+            // get user choice
+            int userChoice = input.nextInt();
+            input.nextLine();
+            // switch on 1,2,3,4,etc...
+            switch (userChoice){
+                case 1:
+                    //need to prompt for constructor fields
+                    addManga();
+                    break;
+                case 2: 
+                    // need add tostring
+                    displayAllManga();
+                    break;
+                case 3:
+                    //add search function
+                case 4:
+                    System.out.println("Exiting program...");
+                    whileRunning = false;
+                    break;
+                default:
+                    System.out.println("Invalid choice, try again");
+            }
+        }
     }
 
     //optional
