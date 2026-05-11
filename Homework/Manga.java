@@ -1,33 +1,21 @@
 public class Manga{
     private int id;
-    private double score;
+    private double rating;
     private String title;
-    private String[] genre;
-    private String audience;
     private String author;
     private String artist;
     private String description;
 
-    //enum for origin
-    //enum for age rating
-    //date var for date published
-    //date var for last update
-    //should have an image
-
-    public Manga(int id, double score, String title, String[] genre, 
-    String audience, String author, String artist, String description){
-        // add missing vars
+    public Manga(int id, double rating, String title, 
+    String author, String artist, String description){
+        // add missing var
         this.id = id;
-        this.score = score;
+        this.rating = rating;
         this.title = title;
-        this.genre = genre;
-        this.audience = audience;
         this.author = author;
         this.artist = artist;
         this.description = description;
     }
-
-    // add default image constructor
 
     //methods
     // get methods
@@ -35,21 +23,12 @@ public class Manga{
         return this.id;
     }
 
-    public double getScore(){
-        return this.score;
+    public double getrating(){
+        return this.rating;
     }
 
     public String getTitle(){
         return this.title;
-    }
-
-    public String[] getGenre(){
-        //needs changes to print array
-        return this.genre;
-    }
-
-    public String getAudience(){
-        return this.audience;
     }
 
     public String getAuthor(){
@@ -64,7 +43,20 @@ public class Manga{
         return this.description;
     }
 
-      
+    // setter methods
+    // set methods limited to variables that should be mutable
+    // in this case, rating and description may change but ID, author, artist, etc... should not in this version
 
-    //all set methods
+    public void setRating(double rating){
+        if (rating >= 0.0 && rating <= 10.0) {
+            this.rating = rating;
+        }
+    }
+
+    public void setDescription(String description){
+        if (description != null && !description.trim().isEmpty()) {
+            this.description = description;
+        }
+    }
+    
 }
