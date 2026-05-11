@@ -15,6 +15,7 @@ public class MangaDB{
     //-methods do function/return value
 
     // add manga
+    // requires a manga object
     public void addManga(Manga m){
         mangaDatabase.add(m);
     }
@@ -34,6 +35,34 @@ public class MangaDB{
         }
     }
 
+    public void addMangaFromUser(Scanner input) {
+        System.out.print("Enter ID: ");
+        int id = input.nextInt();
+        input.nextLine();
+
+        System.out.print("Enter title: ");
+        String title = input.nextLine();
+
+        System.out.print("Enter author: ");
+        String author = input.nextLine();
+
+        System.out.print("Enter artist: ");
+        String artist = input.nextLine();
+
+        System.out.print("Enter rating (0.0 - 10.0): ");
+        double rating = input.nextDouble();
+        input.nextLine();
+
+        System.out.print("Enter description: ");
+        String description = input.nextLine();
+
+        Manga m = new Manga(id, title, author, artist, rating, description);
+
+        mangaDatabase.add(m);
+
+        System.out.println("Manga added successfully!");
+    }
+
     // helper function
     public Manga findMangaById(int id) {
         for (Manga m : mangaDatabase) {
@@ -43,6 +72,7 @@ public class MangaDB{
         }
         return null;
     }
+
     // update->modify 
     // -search by id, then update rating/description
     // delete manga
@@ -92,8 +122,7 @@ public class MangaDB{
             // switch on 1,2,3,4,etc...
             switch (userChoice){
                 case 1:
-                    //need to prompt for constructor fields
-                    addManga();
+                    db.addMangaFromUser(input);
                     break;
                 case 2: 
                     // need add tostring
