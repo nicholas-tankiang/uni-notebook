@@ -40,6 +40,12 @@ public class MangaDB{
         int id = input.nextInt();
         input.nextLine();
 
+         // check for duplicate
+        if (findMangaById(id) != null) {
+            System.out.println("ERROR: Entry with this ID already exists.");
+            return;
+        }
+
         System.out.print("Enter title: ");
         String title = input.nextLine();
 
