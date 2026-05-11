@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class FlowerCounter{
     public static void main(String[] args) {
-        String [] flowerNames = {"petunia", "rose", "daisy", "lily", "tulip"};
+        String [] flowerNames = {"petunia", "pansy", "rose", "violet", "carnation"};
         double [] flowerPrice = {0.5, 0.75, 1.5, 0.5, 0.8};
 
         Scanner input = new Scanner(System.in);
@@ -21,6 +21,7 @@ public class FlowerCounter{
         for (int i = 0; i < flowerNames.length; i++) {
             if(flowerNames[i].equals(flower)){
                 flowerIndex = i;
+                break;
             }
         }
 
