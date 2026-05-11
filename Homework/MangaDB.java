@@ -1,20 +1,45 @@
+import java.util.Scanner;
+
 public class MangaDB{
-
     // MANGADB will function as an arraylist instead of an array, because there should not be a fixed size for the array
+    // Assume that a new session has no entries
+    // -case no entries found, prompt creation
 
-    //return list of top list of books by score
+    //TO DO LIST
+    //have menu looping: show menu ->get user choice-> run method-> repeat until exit
+    //-menu calls methods
+    //-methods do function/return value
 
-    //return list of items by alphabetical order
+    // CRUD:
+    // add manga
+    // read (display) manga entry
+    // -display all manga
+    // update->modify 
+    // -search by id, then update rating/description
+    // delete manga
+    // - search by id, then remove from list
+    // search manga
+    // -search by id
+    // -search by title
+    // -search by author
 
-    //return list of items by same author
+    // for search id operations, use helper function:
+    // findMangaById(int id)
 
-    //insert new book entry
+    // sort manga
+    // -return sort by score or title or ID or same author
+    
+    //priority order
+    // Storage (list of Manga)
+    // addManga
+    // displayAllManga
+    // findById (helper method)
+    // removeManga
+    // updateManga
+    // menu loop
+    // search enhancements
+    // sorting
 
-    //case no entries found, prompt creation
-
-    // return by ID or title
-
-    // return sort by score or title or ID
 
     // unit test edge cases:
     // user tries to remove something that doesn’t exist
