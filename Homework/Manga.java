@@ -6,24 +6,60 @@ public class Manga{
     private String artist;
     private String description;
 
-    public Manga(int id, double rating, String title, 
-    String author, String artist, String description){
-        // add missing var
+    //constructors
+
+    //full constructor
+    public Manga(int id, String title, 
+    String author, String artist, double rating, String description){
         this.id = id;
-        this.rating = rating;
         this.title = title;
         this.author = author;
         this.artist = artist;
+        this.rating = rating;
+        this.description = description;
+    }
+
+    // no rating, description
+    public Manga(int id, String title, 
+    String author, String artist){
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.artist = artist;
+        this.rating = 0.0;
+        this.description = "N/A";
+    }
+
+    // no description
+    public Manga(int id, String title, 
+    String author, String artist, double rating){
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.artist = artist;
+        this.rating = rating;
+        this.description = "N/A";
+    }
+
+    // no rating
+    public Manga(int id, String title, 
+    String author, String artist, String description){
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.artist = artist;
+        this.rating = 0.0;
         this.description = description;
     }
 
     //methods
+
     // get methods
     public int getId(){
         return this.id;
     }
 
-    public double getrating(){
+    public double getRating(){
         return this.rating;
     }
 
@@ -47,13 +83,16 @@ public class Manga{
     // set methods limited to variables that should be mutable
     // in this case, rating and description may change but ID, author, artist, etc... should not in this version
 
-    public void setRating(double rating){
+    public void setRating(double rating) {
+    // must be above 0 less than 10
         if (rating >= 0.0 && rating <= 10.0) {
-            this.rating = rating;
+            //round to one decimal
+            this.rating = Math.round(rating * 10.0) / 10.0;
         }
     }
 
     public void setDescription(String description){
+        // must not be null/empty
         if (description != null && !description.trim().isEmpty()) {
             this.description = description;
         }
