@@ -1,5 +1,7 @@
 public class MangaDB{
 
+    // MANGADB will function as an arraylist instead of an array, because there should not be a fixed size for the array
+
     //return list of top list of books by score
 
     //return list of items by alphabetical order

@@ -88,6 +88,8 @@ public class Manga{
         if (rating >= 0.0 && rating <= 10.0) {
             //round to one decimal
             this.rating = Math.round(rating * 10.0) / 10.0;
+        } else {
+            System.out.println("Invald number");
         }
     }
 
@@ -95,6 +97,8 @@ public class Manga{
         // must not be null/empty
         if (description != null && !description.trim().isEmpty()) {
             this.description = description;
+        } else {
+            System.out.println("Invald description");
         }
     }
     
