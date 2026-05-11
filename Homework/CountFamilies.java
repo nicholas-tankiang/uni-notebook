@@ -9,11 +9,11 @@ import java.util.Scanner;
 public class CountFamilies{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        double [] familyUnit = new double[10];
         double maxIncome = 0;
 
-        System.out.println("Enter no of family units");
+        System.out.println("Enter no of family units ()");
         int familyNo = input.nextInt();
+        double [] familyUnit = new double[familyNo];
 
         System.out.println("Enter family's income for " + familyNo +" units");
         for (int i = 0; i < familyUnit.length; i++){
@@ -24,13 +24,12 @@ public class CountFamilies{
         }
 
         System.out.println("Max income: " + maxIncome);
-        System.out.println("Enter family's income for ten units");
         double maxIncomeTenPercent = maxIncome * 0.1;
 
         int countBelowMaxTen = 0;
         for (int i = 0; i < familyUnit.length; i++){
             if (familyUnit[i] < maxIncomeTenPercent){
-                System.out.println("Family " + (i+1) + " is below 10% of max income");
+                System.out.println("Family " + (i+1) + " income: " + familyUnit[i] + " is below 10% of max income");
                 countBelowMaxTen++;
             }
         }
