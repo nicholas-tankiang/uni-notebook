@@ -60,7 +60,7 @@ public class MangaDB{
 
         mangaDatabase.add(m);
 
-        System.out.println("Manga added successfully!");
+        System.out.println("Manga added successfully");
     }
 
     // helper function
@@ -71,6 +71,21 @@ public class MangaDB{
             }
         }
         return null;
+    }
+
+    public void searchMangaById(Scanner input) {
+        System.out.print("Enter manga's ID to search: ");
+        int id = input.nextInt();
+        input.nextLine();
+
+        Manga result = findMangaById(id);
+
+            if (result != null) {
+                System.out.println("Manga found:");
+                System.out.println(result);
+            } else {
+                System.out.println("No manga found with ID: " + id);
+            }
     }
 
     // update->modify 
@@ -126,10 +141,11 @@ public class MangaDB{
                     break;
                 case 2: 
                     // need add tostring
-                    displayAllManga();
+                    db.displayAllManga();
                     break;
                 case 3:
-                    //add search function
+                    db.searchMangaById(input);
+                    break;
                 case 4:
                     System.out.println("Exiting program...");
                     whileRunning = false;
