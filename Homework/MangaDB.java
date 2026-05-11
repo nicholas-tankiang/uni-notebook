@@ -129,9 +129,9 @@ public class MangaDB{
         System.out.println(m);
 
         System.out.println("Select which to update:");
-        System.out.println("1 . Rating");
-        System.out.println("2 . Description");
-        System.out.println("3 . Both");
+        System.out.println("1 : Rating");
+        System.out.println("2 : Description");
+        System.out.println("3 : Both");
 
         int choice = input.nextInt();
         input.nextLine();
