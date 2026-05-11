@@ -1,7 +1,13 @@
-import java.util.Scanner;
+// import java.util.Scanner;
+import java.util.ArrayList;
 
 public class MangaDB{
     // MANGADB will function as an arraylist instead of an array, because there should not be a fixed size for the array
+    private ArrayList<Manga> mangaDatabase;
+
+    public MangaDB() {
+        mangaDatabase = new ArrayList<>();
+    }
     // Assume that a new session has no entries
     // -case no entries found, prompt creation
 
@@ -12,6 +18,10 @@ public class MangaDB{
 
     // CRUD:
     // add manga
+    public void addManga(Manga m){
+        mangaDatabase.add(m);
+    }
+    
     // read (display) manga entry
     // -display all manga
     // update->modify 
@@ -31,6 +41,7 @@ public class MangaDB{
     
     //priority order
     // Storage (list of Manga)
+
     // addManga
     // displayAllManga
     // findById (helper method)
@@ -40,6 +51,9 @@ public class MangaDB{
     // search enhancements
     // sorting
 
+    public static void main(String[] args) {
+        // running loop
+    }
 
     // unit test edge cases:
     // user tries to remove something that doesn’t exist
