@@ -42,7 +42,7 @@ public class CountPoor{
         int count = 0;
         for (int i = 0; i < k; i++) {
             if(data[i].isPoor(housingCost, foodCost)){
-                System.out.println("Family" + i + " is considered poor");
+                System.out.println(data[i] + " is considered poor");
                 count++;
             }
         }
