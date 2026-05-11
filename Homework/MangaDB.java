@@ -2,17 +2,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MangaDB{
-    // MANGADB will function as an arraylist instead of an array, because there should not be a fixed size for the array
+    // MANGADB will function as an arraylist instead of an array, because there should not be a fixed size for this list
     private ArrayList<Manga> mangaDatabase;
 
     public MangaDB() {
         mangaDatabase = new ArrayList<>();
     }
-
-    //TO DO LIST
-    //have menu looping: show menu ->get user choice-> run method-> repeat until exit
-    //-menu calls methods
-    //-methods do function/return value
 
     // add manga
     // requires a manga object
@@ -35,6 +30,7 @@ public class MangaDB{
         }
     }
 
+    // prompts input
     public void addMangaFromUser(Scanner input) {
         System.out.print("Enter ID: ");
         int id = input.nextInt();
@@ -69,6 +65,11 @@ public class MangaDB{
         System.out.println("Manga added successfully");
     }
 
+    // search manga by id
+    // in future cases:
+    // -search by title
+    // -search by author
+
     // helper function
     public Manga findMangaById(int id) {
         for (Manga m : mangaDatabase) {
@@ -79,7 +80,7 @@ public class MangaDB{
         return null;
     }
 
-    // returns result if id found
+    // returns search result if id found
     public void searchMangaById(Scanner input) {
         System.out.print("Enter manga's ID to search: ");
         int id = input.nextInt();
@@ -95,7 +96,7 @@ public class MangaDB{
             }
     }
 
-    // delete manga, removing from arraylist
+    // delete manga from arraylist
     public void deleteMangaById(Scanner input) {
         System.out.print("Enter manga ID to delete: ");
         int id = input.nextInt();
@@ -111,7 +112,7 @@ public class MangaDB{
         }
     }
 
-    // update mutable vars, prompts a switch input
+    // update mutable vars, prompts switch input
     public void updateMangaById(Scanner input) {
         System.out.print("Enter manga ID to update: ");
         int id = input.nextInt();
@@ -165,29 +166,6 @@ public class MangaDB{
         }
         System.out.println("Manga updated successfully.");
     }
-    
-    // search manga
-    // -search by id
-    // -search by title
-    // -search by author
-
-    // for search id operations, use helper function:
-    // findMangaById(int id)
-
-    // sort manga
-    // -return sort by score or title or ID or same author
-    
-    //priority order
-    // Storage (list of Manga)
-
-    // addManga
-    // displayAllManga
-    // findById (helper method)
-    // removeManga
-    // updateManga
-    // menu loop
-    // search enhancements
-    // sorting
 
     public static void main(String[] args) {
         MangaDB db = new MangaDB();
@@ -240,13 +218,19 @@ public class MangaDB{
         }
     }
 
-    //optional
+    // METHOD ONLY FOR TESTING
+    // (otherwise would need to use scanner)
+    public void deleteMangaByIdTest(Manga m) {
+        if (m != null) {
+            mangaDatabase.remove(m);
+        }
+    }
+
+    // optional future addition: 
     // Assume that a new session has no entries
     // -case no entries found, prompt creation
 
-    // unit test edge cases:
-    // user tries to remove something that doesn’t exist
-    // list is empty and they try to search/sort
-    // Input validation (especially with Scanner)
+    // sort manga
+    // -return sort by score or title or ID or same author
 
 }

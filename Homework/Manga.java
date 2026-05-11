@@ -101,5 +101,19 @@ public class Manga{
             System.out.println("Invalid description");
         }
     }
+
+    // modify the toString method so it can print the Manga object
+    @Override
+    public String toString() {
+        return 
+            "---------------------------\n" +
+            "ID: " + id +
+            "\nTitle: " + title +
+            "\nAuthor: " + author +
+            "\nArtist: " + artist +
+            "\nRating: " + rating +
+            "\nDescription: " + description +
+            "\n---------------------------";
+    }
     
 }
