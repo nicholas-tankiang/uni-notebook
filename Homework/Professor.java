@@ -45,7 +45,15 @@ public class Professor{
     }
 
     public String toString(){
+        String output = "";
 
-        return s;
+        output += 
+        "Name : " + this.getName() + " || " 
+        + "Department: " + this.getDepartment() + " || " 
+        + "Annual Salary: " + this.getAnnualSalary() + " || " 
+        + "Year in Profession: " + this.getYearInProfession()
+        ;
+
+        return output;
     }
 }
