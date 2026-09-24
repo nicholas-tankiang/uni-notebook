@@ -47,6 +47,14 @@ public class Student{
 
     }
 
+    //add copy constructor
+    public Student(Student s){
+        this.name = s.name;
+        this.stu_id = s.stu_id;
+        this.gpa = s.gpa;
+        this.age = s.age;
+    }
+
     public String toString(){
         String output = "";
 
