@@ -45,8 +45,8 @@ public class Teacher extends Person{
     public String toString(){
         String output = super.toString();
         output += "ID: " + this.getID() + " || " 
-        + "\nSalary: " + this.salary
-        + "\nYears in Profession: " + this.num_yr_prof + "\n\n";
+        + "Salary: " + this.salary + " || " 
+        + "Years in Profession: " + this.num_yr_prof + "\n\n";
         return output;
     }
 }

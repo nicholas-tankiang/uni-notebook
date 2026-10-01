@@ -14,11 +14,12 @@ public class Student extends Person {
 
     //toString
     public String toString(){
-        String s = super.toString();
-        s += "Student Info:\nStudent ID: " + this.stu_id;
-        s += "\nGPA: " + this.gpa;
-        s += "\nGrade: " + this.grade + "\n\n";
-        return s;
+        String output = super.toString();
+
+        output += "Student Info:\nStudent ID: " + this.stu_id + " || " 
+        + "GPA: " +  + this.gpa + " || "  
+        + "Grade: " + this.grade + "\n\n";
+        return output;
     }
-    
+
 }
