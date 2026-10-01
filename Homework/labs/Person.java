@@ -1,3 +1,7 @@
+// CSCI185
+// Nicholas Tankiang
+// M3: Inheritance 101 Lab
+
 public class Person{
     private String name;
     private int age;

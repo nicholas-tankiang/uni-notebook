@@ -1,3 +1,7 @@
+// CSCI185
+// Nicholas Tankiang
+// M3: Inheritance 101 Lab
+
 public class Student extends Person {
     //local data
     private String stu_id;

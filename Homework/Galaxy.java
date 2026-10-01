@@ -83,4 +83,16 @@ public class Galaxy{
 
         return output;
     }
+
+    public static void main(String[] args) {
+        //three stars
+        //one galaxy
+
+        Star[] sample_array = new Star[3];
+        sample_array[0] = new Star("Ext-01", 56, 2, 1000.5);
+        sample_array[1] = new Star("GMA-053", 2359, 506, 495634.3);
+        sample_array[2] = new Star("UNKWN", 1, 100000, -99999.9);
+
+        Galaxy sample_galaxy
+    }
 }
