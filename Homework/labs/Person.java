@@ -5,20 +5,29 @@ public class Person{
     private boolean isAlive;
 
     //constructors
-    public Person(String n, String s, int a){
+    public Person(String n, int a, String s, boolean isAlive){
         this.name = n;
         this.age = a;
         this.ssn = s;
+        this.isAlive = isAlive;
+    }
+
+    public Person(){
+        this.name = "";
+        this.age = 0;
+        this.ssn = "";
+        this.isAlive = false;
     }
 
     public Person(Person p){
         if (p == null){
-            System.err.println("Person object invalid! Stop!");
+            System.err.println("Invalid person object, exiting...");
             System.exit(1);
         }
         this.name = p.name;
         this.age = p.age;
         this.ssn = p.ssn;
+        this.isAlive = p.isAlive;
     }
 
     public String getName(){
