@@ -10,75 +10,43 @@ public class Teacher extends Person{
         this.num_yr_prof = num_yr_prof;
     }
 
-    public Professor(Professor p){
-        //validation
-        if (isValidInput(p)){
-            this.name = p.name;
-            this.department = p.department;
-            this.annual_salary = p.annual_salary;
-            this.year_in_profession = p.year_in_profession;
-            // deep copy
-            // this.annual_salary = new Double(p.annual_salary);
-        }
+    public Teacher(){
+        // def case
+        super("", 0, "", false);
+        this.id = "";
+        this.salary = 0;
+        this.num_yr_prof = 0;
     }
 
-    private boolean isValidInput(Professor p){
-        if (p == null 
-        || (p.getName().equals(""))
-        || p.getDepartment().equals("")
-        || p.getAnnualSalary() < 0
-        || p.getYearInProfession() < 0) {
-            System.out.println("Invalid input.");
-            // for the current purpose of actually running this code, exit 0 will be commented out  
-            // and the program will return false but still continue creating the p object even if a bad input is entered
-            // System.exit(0);
-            return false;
-        }
-        return true;
+    public String getID(){
+        return this.id;
     }
 
-    public String getName(){
-        return this.name;
+    public double getSalary(){
+        return this.salary;
     }
 
-    public String getDepartment(){
-        return this.department;
+    public int getProfYears(){
+        return this.num_yr_prof;
     }
 
-    public double getAnnualSalary(){
-        return this.annual_salary;
+    public void setID(String id){
+        this.id = id;
     }
 
-    public int getYearInProfession(){
-        return this.year_in_profession;
+    public void setSalary(int salary){
+        this.salary = salary;
     }
 
-    public void setName(String name){
-        this.name = name;
-    }
-
-    public void setDepartment(String department){
-        this.department = department;
-    }
-
-    public void setAnnualSalary(double salary){
-        this.annual_salary = salary;
-    }
-
-    public void setYearInProfession(int year){
-        this.year_in_profession = year;
+    public void setProfYears(int year){
+        this.num_yr_prof = year;
     }
 
     public String toString(){
-        String output = "";
-
-        output += 
-        "Name: " + this.getName() + " || " 
-        + "Department: " + this.getDepartment() + " || " 
-        + "Annual Salary: " + this.getAnnualSalary() + " || " 
-        + "Year in Profession: " + this.getYearInProfession()
-        ;
-
+        String output = super.toString();
+        output += "ID: " + this.getID() + " || " 
+        + "\nSalary: " + this.salary
+        + "\nYears in Profession: " + this.num_yr_prof + "\n\n";
         return output;
     }
 }
