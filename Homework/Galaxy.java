@@ -1,9 +1,18 @@
+// CSCI185
+// Nicholas Tankiang
+// Homework Assignment #1: Composition
+
+//REM: Please make sure that your Java classes are properly indented and also include comments as necessary to 
+// clearly indicate the different functional blocks as well as the usage of methods.
+
+
 public class Galaxy{
     private String galaxyName;
     private String galaxyType;
     private double galaxyDiameter;
     private Star[] stars;
 
+    //fullload const
     public Galaxy(String galaxyName, String galaxyType, double galaxyDiameter, Star[] stars){
         this.galaxyName = galaxyName;
         this.galaxyType = galaxyType;
@@ -15,6 +24,7 @@ public class Galaxy{
             }
     }
 
+    // copy const 
     public Galaxy(Galaxy inputGalaxy){
         this.galaxyName = inputGalaxy.getName();
         this.galaxyType = inputGalaxy.getType();
@@ -26,6 +36,7 @@ public class Galaxy{
             }
     }
 
+    // get methods
     public String getName(){
         return this.galaxyName;
     }
@@ -46,6 +57,7 @@ public class Galaxy{
         return tmpStars;
     }
 
+    // set methods
     public void setName(String name){
         this.galaxyName = name;
     }
@@ -65,19 +77,20 @@ public class Galaxy{
         }
     }
 
+    // toString string output
     public String toString(){
         String output = "";
 
         output += 
           "Galaxy Name: " + this.getName() + " || " 
         + "Galaxy Type: " + this.getType() + " || " 
-        + "Diameter: " + this.getDiameter() + " || " 
+        + "Diameter: " + this.getDiameter() + "\n" 
         + "List of stars: \n";
         for (int i = 0; i < this.stars.length; i++) {
-            output += "Name: " + this.stars[i].getName() 
-            + "Diameter: " +  this.stars[i].getDiameter()
-            + "Age: " +  this.stars[i].getAge()
-            + "Surface Temp" +  this.stars[i].getSurfaceTemp()
+            output += "Name: " + this.stars[i].getName() + " || " 
+            + "Diameter: " +  this.stars[i].getDiameter() + " || " 
+            + "Age: " +  this.stars[i].getAge() + " || " 
+            + "Surface Temp " +  this.stars[i].getSurfaceTemp()
             + "\n";
         }
 
@@ -93,6 +106,7 @@ public class Galaxy{
         sample_array[1] = new Star("GMA-053", 2359, 506, 495634.3);
         sample_array[2] = new Star("UNKWN", 1, 100000, -99999.9);
 
-        Galaxy sample_galaxy
+        Galaxy sample_galaxy = new Galaxy("name", "type", 123, sample_array);
+        System.out.println(sample_galaxy.toString());
     }
 }

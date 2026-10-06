@@ -1,9 +1,18 @@
+// CSCI185
+// Nicholas Tankiang
+// Homework Assignment #1: Composition
+
+//REM: Please make sure that your Java classes are properly indented and also include comments as necessary to 
+// clearly indicate the different functional blocks as well as the usage of methods.
+
+
 public class Star{
     private String name;
     private double diameter;
     private int age;
     private double surfaceTemp;
 
+    //fullload const
     public Star(String name, double diameter, int age, double surfaceTemp){
         this.name = name;
         this.diameter = diameter;
@@ -11,6 +20,7 @@ public class Star{
         this.surfaceTemp = surfaceTemp;
     }
 
+    // copy const 
     public Star(Star inputStar){
         this.name = inputStar.name;
         this.diameter = inputStar.diameter;
@@ -18,6 +28,7 @@ public class Star{
         this.surfaceTemp = inputStar.surfaceTemp;
     }
 
+    // get methods
     public String getName(){
         return this.name;
     }
@@ -33,6 +44,8 @@ public class Star{
     public double getSurfaceTemp(){
         return this.surfaceTemp;
     }
+
+    // set methods
 
     public void setName(String name){
         this.name = name;
@@ -50,6 +63,7 @@ public class Star{
         this.surfaceTemp = temp;
     }
 
+    // toString string output
     public String toString(){
         String output = "";
 

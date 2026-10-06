@@ -1,3 +1,7 @@
+// CSCI185
+// Nicholas Tankiang
+// M2: Composition Lab
+
 public class Course{
     private String courseName;
     private String courseNumber;
@@ -36,7 +40,6 @@ public class Course{
         || (c.getCourseName().equals(""))
         || c.getCourseNumber().equals("")
         || c.getInstructorName().equals("")
-        // double check that this works
         || c.listStudents.length == 0)
         {
             System.out.println("Invalid input, exiting...");
