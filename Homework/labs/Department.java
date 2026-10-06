@@ -96,21 +96,32 @@ public class Department{
         // Your main method should print out the details of these two Departments 
         // (each department with at least 5 students and 3 teachers).
 
-        Department d1 = new Department("Department of General Fundamentals", 5, listTeachers, listStudents);
+        Teacher[] sample_teachers_1 = new Teacher[3];
+        sample_teachers_1[0] = new Teacher("Angra Mainyu", 99, "666-66-6666", false, "6666666", 100, 666);
+        sample_teachers_1[1] = new Teacher("Angra Mainyu", 99, "666-66-6666", false, "6666666", 100, 666);
+        sample_teachers_1[2] = new Teacher("Angra Mainyu", 99, "666-66-6666", false, "6666666", 100, 666);
 
-        Department d2 = new Department("Department of Modern Magecraft Theory", 1, listTeachers, listStudents);
+        Teacher[] sample_teachers_2 = new Teacher[3];
+        sample_teachers_1[0] = new Teacher("Angra Mainyu", 99, "666-66-6666", false, "6666666", 100, 666);
+        sample_teachers_1[1] = new Teacher("Angra Mainyu", 99, "666-66-6666", false, "6666666", 100, 666);
+        sample_teachers_1[2] = new Teacher("Angra Mainyu", 99, "666-66-6666", false, "6666666", 100, 666);
 
-        Teacher[] sample_teachers = new Teacher[3];
-        sample_teachers[0] = new Teacher("Angra Mainyu", 99, "666-66-6666", false, "6666666", 100, 666);
-        sample_teachers[1] = new Teacher("Angra Mainyu", 99, "666-66-6666", false, "6666666", 100, 666);
-        sample_teachers[2] = new Teacher("Angra Mainyu", 99, "666-66-6666", false, "6666666", 100, 666);
+        Student[] sample_students_1 = new Student[5];
+        sample_students_1[0] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
+        sample_students_1[1] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
+        sample_students_1[2] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
+        sample_students_1[3] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
+        sample_students_1[4] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
 
-        Student[] sample_students = new Student[5];
-        sample_students[0] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
-        sample_students[1] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
-        sample_students[2] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
-        sample_students[3] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
-        sample_students[4] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
+        Student[] sample_students_2 = new Student[5];
+        sample_students_1[0] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
+        sample_students_1[1] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
+        sample_students_1[2] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
+        sample_students_1[3] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
+        sample_students_1[4] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
+
+        Department d1 = new Department("Department of General Fundamentals", 5, sample_teachers_1, sample_students_1);
+        Department d2 = new Department("Department of Modern Magecraft Theory", 1, sample_teachers_2, sample_students_2);
     }
 
 }
