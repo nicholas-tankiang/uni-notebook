@@ -97,31 +97,34 @@ public class Department{
         // (each department with at least 5 students and 3 teachers).
 
         Teacher[] sample_teachers_1 = new Teacher[3];
-        sample_teachers_1[0] = new Teacher("Angra Mainyu", 99, "666-66-6666", false, "6666666", 100, 666);
-        sample_teachers_1[1] = new Teacher("Angra Mainyu", 99, "666-66-6666", false, "6666666", 100, 666);
-        sample_teachers_1[2] = new Teacher("Angra Mainyu", 99, "666-66-6666", false, "6666666", 100, 666);
+        sample_teachers_1[0] = new Teacher("Paracelcus", 306, "666-66-6666", false, "6666666", 100, 666);
+        sample_teachers_1[1] = new Teacher("Scathach", 9999, "666-66-6666", true, "6666666", 100, 666);
+        sample_teachers_1[2] = new Teacher("Keynes Melloi II", 38, "666-66-6666", false, "6666666", 100, 666);
 
         Teacher[] sample_teachers_2 = new Teacher[3];
-        sample_teachers_1[0] = new Teacher("Angra Mainyu", 99, "666-66-6666", false, "6666666", 100, 666);
-        sample_teachers_1[1] = new Teacher("Angra Mainyu", 99, "666-66-6666", false, "6666666", 100, 666);
-        sample_teachers_1[2] = new Teacher("Angra Mainyu", 99, "666-66-6666", false, "6666666", 100, 666);
+        sample_teachers_1[0] = new Teacher("Waver Velvet", 31, "666-66-6666", true, "6666666", 100, 666);
+        sample_teachers_1[1] = new Teacher("Angra", 99, "666-66-6666", true, "6666666", 100, 666);
+        sample_teachers_1[2] = new Teacher("Olga Marie", 28, "666-66-6666", true, "6666666", 100, 666);
 
         Student[] sample_students_1 = new Student[5];
-        sample_students_1[0] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
-        sample_students_1[1] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
-        sample_students_1[2] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
+        sample_students_1[0] = new Student("mmm", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
+        sample_students_1[1] = new Student("fffff", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
+        sample_students_1[2] = new Student("vvmmvmvv", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
         sample_students_1[3] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
         sample_students_1[4] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
 
         Student[] sample_students_2 = new Student[5];
-        sample_students_1[0] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
-        sample_students_1[1] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
-        sample_students_1[2] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
-        sample_students_1[3] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
-        sample_students_1[4] = new Student("Sheldon Cooper", 26, "123-45-6666", true, "1112233", 3.98, "Senior");
+        sample_students_1[0] = new Student("Gray", 20, "123-45-6666", true, "1112233", 3.98, "Senior");
+        sample_students_1[1] = new Student("Flat Escardos", 23, "123-45-6666", true, "1112233", 3.98, "Senior");
+        sample_students_1[2] = new Student("Svin Glascheit", 23, "123-45-6666", true, "1112233", 3.98, "Senior");
+        sample_students_1[3] = new Student("Caules Forvedge", 23, "123-45-6666", true, "1112233", 3.98, "Senior");
+        sample_students_1[4] = new Student("Yvette L. Lehrman", 22, "123-45-6666", true, "1112233", 3.98, "Senior");
 
         Department d1 = new Department("Department of General Fundamentals", 5, sample_teachers_1, sample_students_1);
         Department d2 = new Department("Department of Modern Magecraft Theory", 1, sample_teachers_2, sample_students_2);
+
+        d1.toString();
+        d2.toString();
     }
 
 }
