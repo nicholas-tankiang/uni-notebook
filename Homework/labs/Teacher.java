@@ -14,6 +14,14 @@ public class Teacher extends Person{
         this.num_yr_prof = num_yr_prof;
     }
 
+    //new copy const
+     public Teacher(Teacher teach){
+        super(teach.getName(), teach.getAge(), teach.getSSN(), teach.getAliveStatus());
+        this.id = teach.id;
+        this.salary = teach.salary;
+        this.num_yr_prof = teach.num_yr_prof;
+    }
+
     public Teacher(){
         // def case
         super("", 0, "", false);

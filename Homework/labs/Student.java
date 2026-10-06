@@ -16,6 +16,14 @@ public class Student extends Person {
         this.grade = grade;
     }
 
+    //new copy const
+     public Student(Student stud){
+        super(stud.getName(), stud.getAge(), stud.getSSN(), stud.getAliveStatus());
+        this.stu_id = stud.stu_id;
+        this.gpa = stud.gpa;
+        this.grade = stud.grade;
+    }
+
     //toString
     public String toString(){
         String output = super.toString();
