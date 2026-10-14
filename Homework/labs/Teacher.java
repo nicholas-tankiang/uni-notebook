@@ -16,6 +16,15 @@ public class Teacher extends Person{
 
     //new copy const
      public Teacher(Teacher teach){
+        // check for null
+        if (teach == null){
+            System.out.println("Null teacher object");
+            System.exit(0);
+        }
+        if (teach.getName().equals("") || teach.getAge() == 0 || teach.getSSN().equals("")) {
+            System.out.println("Bad teacher object");
+            System.exit(0);
+        }
         super(teach.getName(), teach.getAge(), teach.getSSN(), teach.getAliveStatus());
         this.id = teach.id;
         this.salary = teach.salary;
