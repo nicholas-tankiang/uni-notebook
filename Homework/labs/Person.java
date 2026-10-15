@@ -1,6 +1,6 @@
 // CSCI185
 // Nicholas Tankiang
-// M3: Inheritance 101 Lab
+// M4: Polymorphism Lab
 
 public class Person{
     private String name;
@@ -48,6 +48,17 @@ public class Person{
 
     public boolean getAliveStatus(){
         return this.isAlive;
+    }
+
+    // Polymorphism lab addition, poly method for taking abstract Person object and dynamically identifying payment type
+    public void getPaid(Person personType){
+        //ASSUMING SALARY = BASE PAYMENT WITH TIME ALREADY APPLIED
+        System.out.println("No pay assigned");
+
+    }
+
+    public void getVacation(Person personType){
+        System.out.println("No vacation pay assigned");
     }
 
     public void setName(String name){

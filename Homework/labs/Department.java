@@ -1,5 +1,5 @@
 // CSCI185
-// Nicholas Tankiang
+// INSERT NAMES HERE DJSFSIJDFGJDS##($($((#((#))))))
 // M3: Integration of Inheritance and Composition Lab
 
 public class Department{
