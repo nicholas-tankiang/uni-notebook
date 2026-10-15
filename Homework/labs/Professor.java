@@ -7,6 +7,11 @@ class Professor extends Person{
     private String researchArea;
     // Assuming salary already represents monthly salary
     private int salary;
+
+    // Note: Adding salaryType technically makes having subclass methods override superclass pointless since can
+    // just be defined once in Person class
+    //private final String salaryType = "Monthly";
+
     // Assuming numVacation represents number of vacation days
     private final int numVacation = 90;
 

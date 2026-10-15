@@ -10,10 +10,12 @@ class Secretary extends Person{
     // Assuming numVacation represents number of vacation days
     private final int numVacation = 30;
 
+    // getPaid @override of Person method of same name
     public void getPaid(Person personType){
         System.out.println("Bi-weekly payment of " + salary);
     }
 
+    // getVacation @override of Person method of same name
     public void getVacation(Person personType){
         System.out.println(numVacation + " days of vacation assigned");
     }
